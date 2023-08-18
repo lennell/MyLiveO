@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkMyAngularTegel=self.webpackChunkMyAngularTegel||[]).push([[1837],{1837:(t,e,l)=>{l.r(e),l.d(e,{tds_header_launcher_list:()=>u});var s=l(1879),n=l(813);const u=class{constructor(d){(0,s.r)(this,d),this.uuid=(0,n.g)()}render(){return(0,s.h)(s.H,null,(0,s.h)("tds-header-dropdown-list",{size:"lg"},(0,s.h)("slot",null)))}}}}]);
