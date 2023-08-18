@@ -1,0 +1,7 @@
+@import url('@scania/tegel/dist/tegel/tegel.css');
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
