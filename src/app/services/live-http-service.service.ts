@@ -14,7 +14,8 @@ export class LiveHttpServiceService {
   constructor(private http:HttpClient) { }
 
   getCompetitions():Observable<Object>{
-    return this.http.get<any>(this.API_URL+'?method=getcompetitions');
+    var r = this.http.get<Object>(this.API_URL+'?method=getcompetitions');
+    return r;
   }
 
   getCompetitionInfo(id:number):Observable<CompetitionInfo>{

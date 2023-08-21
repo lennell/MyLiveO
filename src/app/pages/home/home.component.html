@@ -1,9 +1,8 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
   <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
 
- <!-- <div style="display:inline-block">
+ <div style="display:inline-block">
     <input  [(ngModel)]="txtSearch"
-            class="text-field-input-sm"
             type="text"
             name="txtSearch"
             autofocus
@@ -11,46 +10,20 @@
             (ngModelChange)="doFilter()"
             placeholder="Filter"
             [ngModelOptions]="{standalone: true}">
-  </div>-->
+  </div>
 
-  <div style="display:inline-block">
-    <tds-text-field
-      [(ngModel)]="txtSearch"
-      type="Text"
-      size="lg"
-      state="default"
-      autofocus
-      required
-      mode-variant="secondary"
-      label="Filter"
-      (ngModelChange)="doFilter()"
-      label-position="inside"
-      no-min-width
-      ngDefaultControl
-    ></tds-text-field></div>
-
-
-  <tds-button
-    size="sm"
-    text=">>"
-    (click)="submitForm()">
-  </tds-button>
+  <button type="button" (click)="submitForm()">>></button>
 
   <p *ngFor="let s of searchList" style="display:inline-block;margin-left: 20px">
     <tds-link ><a (click)="selectFilter(s)" href="#">{{s}}</a></tds-link>
   </p>
   <div  style="display:inline-block;float: right">
-    <tds-button
-      size="sm"
-      text="Clear"
-      (click)="clearForm()">
-    </tds-button>
+    <button (click)="clearForm()">
+      Clear
+    </button>
   </div>
   </tds-block>
 <tds-block class="tds-container">
-
-
-  <div class="tds-container">
 
     <div class="tds-row">
       <div class="tds-col-max">
@@ -84,7 +57,11 @@
             {{competitionInfo.date}}<br>
             {{competitionInfo.organizer}}<br>
           </span>
-          <span [hidden]="1 !== selectedIndex"> Content for 2nd tab </span>
+          <span [hidden]="1 !== selectedIndex">
+
+            Content for 2nd tab
+
+          </span>
           <span [hidden]="2 !== selectedIndex"> Content for 3rd tab </span>
         </div>
 
@@ -92,9 +69,6 @@
 
 
     </div>
-  </div>
-
-
 </tds-block>
 
 
