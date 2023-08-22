@@ -19,6 +19,7 @@ export class HomeComponent {
   public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
 
+
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 

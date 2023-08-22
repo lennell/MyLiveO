@@ -32,35 +32,37 @@
 
         <tds-inline-tabs default-selected-index="0" #tabs>
           <tds-inline-tab>
-            <button>Competitions</button>
+            <button>Live</button>
           </tds-inline-tab>
           <tds-inline-tab>
             <button>Info</button>
           </tds-inline-tab>
           <tds-inline-tab>
-            <button>Third tab</button>
+            <button>Competitions</button>
           </tds-inline-tab>
         </tds-inline-tabs>
         <div class="tabs-panel">
           <span [hidden]="0 !== selectedIndex">
-          <div >
-          <dl>
-            <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
-              {{c.date}}  <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
-            </dt>
-          </dl>
-
-        </div>
+         a
           </span>
           <span [hidden]="1 !== selectedIndex">
 
-           {{competitionInfo.id}}<br>
+            {{competitionInfo.id}}<br>
             {{competitionInfo.name}}<br>
             {{competitionInfo.date}}<br>
             {{competitionInfo.organizer}}<br>
 
           </span>
-          <span [hidden]="2 !== selectedIndex"> Content for 3rd tab </span>
+          <span [hidden]="2 !== selectedIndex">
+            <div >
+              <dl>
+                <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
+                  {{c.date}}  <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
+                </dt>
+              </dl>
+
+            </div>
+          </span>
         </div>
 
 
