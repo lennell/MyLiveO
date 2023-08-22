@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/Capture.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.0a22d4deb70cd69b.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +35,10 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UL2Pf6rluUOQVR375fJMQ1gSgV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
@@ -85,8 +89,21 @@
       <option name="presentableId" value="Default" />
       <updated>1692704519066</updated>
       <workItem from="1692704520206" duration="838000" />
+      <workItem from="1692705379893" duration="893000" />
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="a">
+      <created>1692705407678</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1692705407678</updated>
+    </task>
+    <task id="LOCAL−00004" summary="a">
+      <created>1692706068627</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1692706068627</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
