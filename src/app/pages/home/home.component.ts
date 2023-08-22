@@ -36,6 +36,7 @@ export class HomeComponent {
     });
   }
 
+
   clickCompetition(id:number) {
     console.log(id)
     this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
