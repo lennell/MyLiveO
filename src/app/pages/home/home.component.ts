@@ -4,7 +4,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Competition} from "../../models/competition";
 import {LiveHttpServiceService} from "../../services/live-http-service.service";
 import {CompetitionInfo} from "../../models/competition-info";
-import {filter} from "rxjs";
+
 
 @Component({
   selector: 'app-home',
@@ -16,12 +16,11 @@ export class HomeComponent {
   public searchList: string[] = [];
   public txtSearch:string = '';
   public userList: string[] = [];
-  public txtUser:string = 'Lennell'
+  public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
   public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
-
   protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -30,7 +29,20 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
+    this.searchList = []
+    this.userList = []
     console.log('init');
+    if (localStorage.getItem('searchList')){
+      // @ts-ignore
+      this.searchList = localStorage.getItem('searchList')?.split(',');
+    }
+    if (localStorage.getItem('userList')){
+      // @ts-ignore
+      this.userList = localStorage.getItem('userList')?.split(',');
+    }
+    if (this.userList){
+      this.txtUser = this.userList[0]
+    }
     this.service.getCompetitions().subscribe( (response:object) => {
       // @ts-ignore
       response.competitions.forEach( c => {
@@ -59,23 +71,25 @@ export class HomeComponent {
   }
 
   submitForm() {
-    console.log(this.txtSearch);
     this.searchList.push(this.txtSearch);
+    localStorage.setItem('searchList',this.searchList.toString())
   }
 
   doFilter() {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtSearch));
-
   }
 
   selectFilter(value:string) {
     this.txtSearch = value;
+    (document.getElementById('tab1') as HTMLElement).click();
   }
 
   clearForm() {
     this.searchList = [];
+    localStorage.removeItem('searchList');
     this.txtSearch = '';
     this.userList = [];
+    localStorage.removeItem('userList');
     this.txtUser = '';
   }
 
@@ -88,15 +102,16 @@ export class HomeComponent {
   submitFormUser() {
     console.log(this.txtUser);
     this.userList.push(this.txtUser);
-    //this.searchList.push(this.txtSearch);
+    localStorage.setItem('userList',this.userList.toString())
   }
 
   selectFilterUser(value:string) {
     this.txtUser = value;
+    (document.getElementById('tab0') as HTMLElement).click();
   }
 
   filterToday(comp: Competition[]) {
-
     return comp.filter( c => c.date === this.todayDate);
   }
+
 }
