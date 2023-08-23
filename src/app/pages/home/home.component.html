@@ -1,25 +1,22 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
-  <span *ngFor="let s of searchList" style="display:inline-block;margin-left: 20px">
+  Comp. Filter:
+  <span *ngFor="let s of searchList" style="display:inline-block;margin-left: 10px">
     <tds-link ><a (click)="selectFilter(s)" href="#">{{s}}</a></tds-link>
   </span>
-  <br *ngIf="searchList.length"/>
-  <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
-  <div style="display:inline-block">
-    <input  [(ngModel)]="txtSearch"
-            type="text"
-            name="txtSearch"
-            autofocus
-            required
-            (ngModelChange)="doFilter()"
-            placeholder="Filter"
-            [ngModelOptions]="{standalone: true}">
-  </div>
+  <br/>
+  User Filter:
+  <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px">
+    <tds-link ><a (click)="selectFilterUser(u)" href="#">{{u}}</a></tds-link>
+  </span>
+  <br/>
+  Today:
 
-  <button type="button" (click)="submitForm()">>></button>
+  <span *ngFor="let c of filterToday(competitions)" style="display:inline-block;margin-left: 10px">
+    <tds-link>
+      <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
+    </tds-link>
+  </span>
 
-  <p *ngFor="let s of searchList" style="display:inline-block;margin-left: 20px">
-    <tds-link ><a (click)="selectFilter(s)" href="#">{{s}}</a></tds-link>
-  </p>
 
   <div  style="display:inline-block;float: right">
     <button (click)="clearForm()">
@@ -35,25 +32,78 @@
             <button>Live</button>
           </tds-inline-tab>
           <tds-inline-tab>
-            <button>Info</button>
+            <button>Competitions</button>
           </tds-inline-tab>
           <tds-inline-tab>
-            <button>Competitions</button>
+            <button>Info</button>
           </tds-inline-tab>
         </tds-inline-tabs>
         <div class="tabs-panel">
           <span [hidden]="0 !== selectedIndex">
-         a
+          <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
+              <div style="display:inline-block">
+                <input  [(ngModel)]="txtUser"
+                        type="text"
+                        name="txtUser"
+                        autofocus
+                        required
+                        (ngModelChange)="doFilterUser()"
+                        placeholder="Filter"
+                        [ngModelOptions]="{standalone: true}">
+              </div>
+
+              <button type="button" (click)="submitFormUser()">>></button>
+
+
+
+<tds-table vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
+  <tds-table-header>
+    <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
+    <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
+    <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
+    <tds-header-cell column-key="mileage" column-title="Time" text-align="right"></tds-header-cell>
+  </tds-table-header>
+  <tds-table-body>
+    <tds-table-body-row>
+      <tds-body-cell
+        cell-value="Test value 1"
+        cell-key="truck"
+        disable-padding="false"
+      ></tds-body-cell>
+      <tds-body-cell
+        cell-value="Test value 2"
+        cell-key="driver"
+        disable-padding="false"
+      ></tds-body-cell>
+      <tds-body-cell
+        cell-value="Test value 3"
+        cell-key="country"
+        disable-padding="false"
+      ></tds-body-cell>
+      <tds-body-cell
+        cell-value="Test value 4"
+        cell-key="mileage"
+        disable-padding="false"
+      ></tds-body-cell>
+    </tds-table-body-row>
+  </tds-table-body>
+</tds-table>
+
           </span>
           <span [hidden]="1 !== selectedIndex">
+        <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
+            <div style="display:inline-block">
+              <input  [(ngModel)]="txtSearch"
+                      type="text"
+                      name="txtSearch"
+                      autofocus
+                      required
+                      (ngModelChange)="doFilter()"
+                      placeholder="Filter"
+                      [ngModelOptions]="{standalone: true}">
+            </div>
 
-            {{competitionInfo.id}}<br>
-            {{competitionInfo.name}}<br>
-            {{competitionInfo.date}}<br>
-            {{competitionInfo.organizer}}<br>
-
-          </span>
-          <span [hidden]="2 !== selectedIndex">
+            <button type="button" (click)="submitForm()">>></button>
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
@@ -62,6 +112,14 @@
               </dl>
 
             </div>
+
+
+          </span>
+          <span [hidden]="2 !== selectedIndex">
+            {{competitionInfo.id}}<br>
+            {{competitionInfo.name}}<br>
+            {{competitionInfo.date}}<br>
+            {{competitionInfo.organizer}}<br>
           </span>
         </div>
 

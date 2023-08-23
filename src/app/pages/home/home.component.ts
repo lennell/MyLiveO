@@ -4,6 +4,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Competition} from "../../models/competition";
 import {LiveHttpServiceService} from "../../services/live-http-service.service";
 import {CompetitionInfo} from "../../models/competition-info";
+import {filter} from "rxjs";
 
 @Component({
   selector: 'app-home',
@@ -14,12 +15,14 @@ export class HomeComponent {
   protected readonly top = top;
   public searchList: string[] = [];
   public txtSearch:string = '';
+  public userList: string[] = [];
+  public txtUser:string = 'Lennell'
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
   public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
 
-
+  protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
@@ -36,7 +39,6 @@ export class HomeComponent {
       this.competitions = this.competitionsOrig;
     });
   }
-
 
   clickCompetition(id:number) {
     console.log(id)
@@ -59,25 +61,42 @@ export class HomeComponent {
   submitForm() {
     console.log(this.txtSearch);
     this.searchList.push(this.txtSearch);
-
   }
-
 
   doFilter() {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtSearch));
+
   }
 
-  protected readonly Date = Date;
-
   selectFilter(value:string) {
-    console.log("yyyy " + value)
     this.txtSearch = value;
   }
 
   clearForm() {
     this.searchList = [];
     this.txtSearch = '';
+    this.userList = [];
+    this.txtUser = '';
   }
 
-  protected readonly JSON = JSON;
+
+  doFilterUser() {
+    console.log('Filter user')
+   // this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtSearch));
+  }
+
+  submitFormUser() {
+    console.log(this.txtUser);
+    this.userList.push(this.txtUser);
+    //this.searchList.push(this.txtSearch);
+  }
+
+  selectFilterUser(value:string) {
+    this.txtUser = value;
+  }
+
+  filterToday(comp: Competition[]) {
+
+    return comp.filter( c => c.date === this.todayDate);
+  }
 }

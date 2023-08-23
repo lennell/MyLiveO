@@ -1,10 +1,11 @@
 .tabs-panel {
   background-color: var(--tds-white);
-  height: 350px;
+  min-height: 350px;
   padding: 5px;
 }
-.center {
-  padding: 50px;
+
+span {
+  font-size: smaller;
 }
 
 
