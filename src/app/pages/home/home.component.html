@@ -1,6 +1,6 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
   Comp. Filter:
-  <span *ngFor="let s of searchList" style="display:inline-block;margin-left: 10px">
+  <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px">
     <tds-link ><a (click)="selectFilter(s)" href="#">{{s}}</a></tds-link>
   </span>
   <br/>
@@ -93,7 +93,7 @@
           <span [hidden]="1 !== selectedIndex">
         <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
             <div style="display:inline-block">
-              <input  [(ngModel)]="txtSearch"
+              <input  [(ngModel)]="txtComp"
                       type="text"
                       name="txtSearch"
                       autofocus
@@ -103,7 +103,7 @@
                       [ngModelOptions]="{standalone: true}">
             </div>
 
-            <button type="button" (click)="submitForm()">>></button>
+            <button type="button" (click)="submitFormComp()">>></button>
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
@@ -116,14 +116,34 @@
 
           </span>
           <span [hidden]="2 !== selectedIndex">
-            {{competitionInfo.id}}<br>
-            {{competitionInfo.name}}<br>
-            {{competitionInfo.date}}<br>
-            {{competitionInfo.organizer}}<br>
+            <p>
+              {{competitionInfo.id}}
+              {{competitionInfo.name}}
+              {{competitionInfo.date}}
+              {{competitionInfo.organizer}}
+            </p>
+            <tds-table vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
+              <tds-table-header>
+                <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
+                <tds-header-cell column-key="?" column-title="#"></tds-header-cell>
+              </tds-table-header>
+              <tds-table-body>
+                <tds-table-body-row>
+                  <tds-body-cell
+                    cell-value="Test value 1"
+                    cell-key="truck"
+                    disable-padding="false"
+                  ></tds-body-cell>
+                  <tds-body-cell
+                    cell-value="Test value 2"
+                    cell-key="driver"
+                    disable-padding="false"
+                  ></tds-body-cell>
+                </tds-table-body-row>
+              </tds-table-body>
+            </tds-table>
           </span>
         </div>
-
-
 </tds-block>
 
 

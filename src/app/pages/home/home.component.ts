@@ -13,15 +13,15 @@ import {CompetitionInfo} from "../../models/competition-info";
 })
 export class HomeComponent {
   protected readonly top = top;
-  public searchList: string[] = [];
-  public txtSearch:string = '';
+  public compList: string[] = [];
+  public txtComp:string = '';
   public userList: string[] = [];
   public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
   public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
-  protected readonly JSON = JSON;
+  //protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
@@ -29,12 +29,12 @@ export class HomeComponent {
   }
 
   ngOnInit(): void {
-    this.searchList = []
+    this.compList = []
     this.userList = []
     console.log('init');
-    if (localStorage.getItem('searchList')){
+    if (localStorage.getItem('compList')){
       // @ts-ignore
-      this.searchList = localStorage.getItem('searchList')?.split(',');
+      this.compList = localStorage.getItem('compList')?.split(',');
     }
     if (localStorage.getItem('userList')){
       // @ts-ignore
@@ -70,24 +70,24 @@ export class HomeComponent {
     }
   }
 
-  submitForm() {
-    this.searchList.push(this.txtSearch);
-    localStorage.setItem('searchList',this.searchList.toString())
+  submitFormComp() {
+    this.compList.push(this.txtComp);
+    localStorage.setItem('compList',this.compList.toString())
   }
 
   doFilter() {
-    this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtSearch));
+    this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtComp));
   }
 
   selectFilter(value:string) {
-    this.txtSearch = value;
+    this.txtComp = value;
     (document.getElementById('tab1') as HTMLElement).click();
   }
 
   clearForm() {
-    this.searchList = [];
-    localStorage.removeItem('searchList');
-    this.txtSearch = '';
+    this.compList = [];
+    localStorage.removeItem('compList');
+    this.txtComp = '';
     this.userList = [];
     localStorage.removeItem('userList');
     this.txtUser = '';
