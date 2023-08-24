@@ -62,17 +62,10 @@ export class HomeComponent {
     this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
       this.competitionInfo =  response;
     });
-    console.log('yyyy1')
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
-      console.log('yyyy2');
     });
-
-    console.log('yyyy3')
-
   }
-
-
 
   ngAfterViewInit() {
     if (this.tabsRef) {
