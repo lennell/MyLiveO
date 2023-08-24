@@ -1,4 +1,4 @@
-export class Classes {
+export class ClassesObj {
   status: string
   classes: Class[]
   hash: string

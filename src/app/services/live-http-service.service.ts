@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {firstValueFrom, Observable} from "rxjs";
 import {Competition} from "../models/competition";
 import {CompetitionInfo} from "../models/competition-info";
-import {Classes} from "../models/classes";
+import {ClassesObj} from "../models/classes";
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +23,9 @@ export class LiveHttpServiceService {
      return this.http.get<CompetitionInfo>(this.API_URL+'?method=getcompetitioninfo&comp='+id);
   }
 
-  getClasses(id:number):Observable<Classes>{
-    return this.http.get<Classes>(this.API_URL+'?method=getclasses&comp='+id+'&last_hash=aa')
+  getClasses(id:number):Observable<ClassesObj>{
+    return this.http.get<ClassesObj>(this.API_URL+'?method=getclasses&comp='+id+'&last_hash=aa')
   }
+
+
 }

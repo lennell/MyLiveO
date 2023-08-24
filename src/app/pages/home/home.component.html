@@ -128,12 +128,11 @@
                 <tds-header-cell column-key="?" column-title="#"></tds-header-cell>
               </tds-table-header>
               <tds-table-body>
-                <tds-table-body-row>
-                  <tds-body-cell
-                    cell-value="Test value 1"
-                    cell-key="truck"
-                    disable-padding="false"
-                  ></tds-body-cell>
+                <tds-table-body-row *ngFor="let cl of classesObj.classes">
+
+                  <tds-body-cell disable-padding="false">
+                    {{cl.className}}
+                  </tds-body-cell>
                   <tds-body-cell
                     cell-value="Test value 2"
                     cell-key="driver"

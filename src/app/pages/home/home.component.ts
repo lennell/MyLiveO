@@ -4,6 +4,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Competition} from "../../models/competition";
 import {LiveHttpServiceService} from "../../services/live-http-service.service";
 import {CompetitionInfo} from "../../models/competition-info";
+import {ClassesObj} from "../../models/classes";
 
 
 @Component({
@@ -19,8 +20,11 @@ export class HomeComponent {
   public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
+
   public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
+
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
+  public classesObj: ClassesObj = new ClassesObj();
   //protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -52,12 +56,23 @@ export class HomeComponent {
     });
   }
 
+
   clickCompetition(id:number) {
     console.log(id)
     this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
       this.competitionInfo =  response;
     });
+    console.log('yyyy1')
+    this.service.getClasses(id).subscribe( (response:ClassesObj) => {
+      this.classesObj = response;
+      console.log('yyyy2');
+    });
+
+    console.log('yyyy3')
+
   }
+
+
 
   ngAfterViewInit() {
     if (this.tabsRef) {
