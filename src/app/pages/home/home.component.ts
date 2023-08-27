@@ -26,7 +26,6 @@ export class HomeComponent {
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
-  public resultsObj: ResultsObj = new ResultsObj();
   public resultsObjArray: ResultsObj[] = [];
   //protected readonly JSON = JSON;
   selectedIndex: number = 0;
@@ -64,12 +63,15 @@ export class HomeComponent {
     console.log(id)
     this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
       this.competitionInfo =  response;
+      this.getUserFilterResult(id);
     });
-    this.service.getClasses(id).subscribe( (response:ClassesObj) => {
+   /* this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
     });
+*/
+    //this.classesObj = new ClassesObj();
+    //console.log("check " + this.classesObj.status)
 
-    this.getUserResult(id);
   }
 
   ngAfterViewInit() {
@@ -127,21 +129,19 @@ export class HomeComponent {
     return comp.filter( c => c.date === this.todayDate);
   }
 
-  clickResults(className: string) {
-    console.log(this.competitionInfo.id + ' ' + className)
-    this.service.getClassResults(this.competitionInfo.id,className).subscribe((response:ResultsObj) => {
-      this.resultsObj = response;
-      console.log('j%',this.resultsObj);
-    });
-  }
 
-  getUserResult(id:number){
+
+  getUserFilterResult(id:number){
+    //console.log("check again " + this.classesObj.status)
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.resultsObjArray = [];
       this.classesObj = response;
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
           this.resultsObjArray.push(  response );
+
+          console.log('aaa' + this.txtUser)
+
         });
 
       });
@@ -149,4 +149,5 @@ export class HomeComponent {
 
   }
 
+  protected readonly JSON = JSON;
 }

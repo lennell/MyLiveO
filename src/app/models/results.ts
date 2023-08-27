@@ -4,6 +4,7 @@ export class ResultsObj {
   splitcontrols: any[]
   results: Result[]
   hash: string
+  filteredResult: Result[]
 }
 
 export class Result {
