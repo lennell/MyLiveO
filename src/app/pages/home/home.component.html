@@ -26,7 +26,7 @@
 </tds-block>
 
 <tds-block class="tds-container">
-
+  <p *ngIf="competitionInfo">{{competitionInfo.id + ' ' + competitionInfo.name}}</p>
         <tds-inline-tabs default-selected-index="0" #tabs>
           <tds-inline-tab>
             <button id="tab0">Live</button>
@@ -54,40 +54,30 @@
 
               <button type="button" (click)="submitFormUser()">>></button>
 
-
-
-<tds-table vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
-  <tds-table-header>
-    <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
-    <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
-    <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
-    <tds-header-cell column-key="mileage" column-title="Time" text-align="right"></tds-header-cell>
-  </tds-table-header>
-  <tds-table-body>
-    <tds-table-body-row>
-      <tds-body-cell
-        cell-value="Test value 1"
-        cell-key="truck"
-        disable-padding="false"
-      ></tds-body-cell>
-      <tds-body-cell
-        cell-value="Test value 2"
-        cell-key="driver"
-        disable-padding="false"
-      ></tds-body-cell>
-      <tds-body-cell
-        cell-value="Test value 3"
-        cell-key="country"
-        disable-padding="false"
-      ></tds-body-cell>
-      <tds-body-cell
-        cell-value="Test value 4"
-        cell-key="mileage"
-        disable-padding="false"
-      ></tds-body-cell>
-    </tds-table-body-row>
-  </tds-table-body>
-</tds-table>
+              <tds-table vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
+                <tds-table-header>
+                  <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
+                  <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
+                  <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
+                  <tds-header-cell column-key="result" column-title="result" text-align="right"></tds-header-cell>
+                </tds-table-header>
+                <tds-table-body *ngFor="let arr of resultsObjArray">
+                  <tds-table-body-row *ngFor="let r of arr.results">
+                    <tds-body-cell disable-padding="false">
+                     {{arr.className}}
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
+                       {{r.place}}
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
+                      {{r.name}}
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false">
+                      {{r.result}}
+                    </tds-body-cell>
+                  </tds-table-body-row>
+                </tds-table-body>
+              </tds-table>
 
           </span>
           <span [hidden]="1 !== selectedIndex">
@@ -131,7 +121,9 @@
                 <tds-table-body-row *ngFor="let cl of classesObj.classes">
 
                   <tds-body-cell disable-padding="false">
-                    {{cl.className}}
+                    <tds-link>
+                      <a href="#" (click)="clickResults(cl.className)" >{{cl.className}}</a>
+                    </tds-link>
                   </tds-body-cell>
                   <tds-body-cell
                     cell-value="Test value 2"

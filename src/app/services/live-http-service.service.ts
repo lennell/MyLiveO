@@ -4,6 +4,7 @@ import {firstValueFrom, Observable} from "rxjs";
 import {Competition} from "../models/competition";
 import {CompetitionInfo} from "../models/competition-info";
 import {ClassesObj} from "../models/classes";
+import {ResultsObj} from "../models/results";
 
 @Injectable({
   providedIn: 'root'
@@ -27,5 +28,8 @@ export class LiveHttpServiceService {
     return this.http.get<ClassesObj>(this.API_URL+'?method=getclasses&comp='+id+'&last_hash=aa')
   }
 
+  getClassResults(id:number,clas:string):Observable<ResultsObj>{
+    return this.http.get<ResultsObj>(this.API_URL+'?comp='+id+'&method=getclassresults&unformattedTimes=false&class='+clas);
+  }
 
 }
