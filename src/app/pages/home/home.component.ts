@@ -56,22 +56,29 @@ export class HomeComponent {
       });
       this.competitions = this.competitionsOrig;
     });
+    if (localStorage.getItem('compId')){
+      // @ts-ignore
+      let id:number = parseInt(localStorage.getItem('compId'));
+      this.clickCompetition(id);
+
+    }
   }
 
 
   clickCompetition(id:number) {
     console.log(id)
+    localStorage.setItem('compId',id.toString());
     this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
       this.competitionInfo =  response;
       this.getUserFilterResult(id);
     });
-   /* this.service.getClasses(id).subscribe( (response:ClassesObj) => {
+    this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
     });
-*/
+
     //this.classesObj = new ClassesObj();
     //console.log("check " + this.classesObj.status)
-
+    (document.getElementById('tab0') as HTMLElement).click();
   }
 
   ngAfterViewInit() {
@@ -90,12 +97,13 @@ export class HomeComponent {
     localStorage.setItem('compList',this.compList.toString())
   }
 
-  doFilter() {
+  doFilterComp() {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtComp));
   }
 
-  selectFilter(value:string) {
+  selectFilterComp(value:string) {
     this.txtComp = value;
+    this.doFilterComp();
     (document.getElementById('tab1') as HTMLElement).click();
   }
 
@@ -108,28 +116,31 @@ export class HomeComponent {
     this.txtUser = '';
   }
 
-
-  doFilterUser() {
-    console.log('Filter user')
-   // this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtSearch));
+  backUser() {
+    this.userList.pop();
+    localStorage.setItem('userList',this.userList.toString())
+  }
+  backComp() {
+    this.compList.pop();
+    localStorage.setItem('compList',this.compList.toString());
   }
 
   submitFormUser() {
     console.log(this.txtUser);
     this.userList.push(this.txtUser);
     localStorage.setItem('userList',this.userList.toString())
+    this.getUserFilterResult(this.competitionInfo.id);
   }
 
   selectFilterUser(value:string) {
     this.txtUser = value;
+    this.getUserFilterResult(this.competitionInfo.id);
     (document.getElementById('tab0') as HTMLElement).click();
   }
 
   filterToday(comp: Competition[]) {
     return comp.filter( c => c.date === this.todayDate);
   }
-
-
 
   getUserFilterResult(id:number){
     //console.log("check again " + this.classesObj.status)
@@ -138,7 +149,10 @@ export class HomeComponent {
       this.classesObj = response;
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
-          this.resultsObjArray.push(  response );
+
+          var result:ResultsObj = response;
+          result.filteredResults = this.txtUser?result.results.filter( r => r.name.includes(this.txtUser)):result.results;
+          this.resultsObjArray.push(  result );
 
           console.log('aaa' + this.txtUser)
 
@@ -149,5 +163,5 @@ export class HomeComponent {
 
   }
 
-  protected readonly JSON = JSON;
+
 }
