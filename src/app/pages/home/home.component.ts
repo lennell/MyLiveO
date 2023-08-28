@@ -27,7 +27,7 @@ export class HomeComponent {
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
   public resultsObjArray: ResultsObj[] = [];
-  //protected readonly JSON = JSON;
+  protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
@@ -72,10 +72,10 @@ export class HomeComponent {
       this.competitionInfo =  response;
       this.getUserFilterResult(id);
     });
-    this.service.getClasses(id).subscribe( (response:ClassesObj) => {
+   /* this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
     });
-
+*/
     //this.classesObj = new ClassesObj();
     //console.log("check " + this.classesObj.status)
     (document.getElementById('tab0') as HTMLElement).click();
@@ -149,19 +149,16 @@ export class HomeComponent {
       this.classesObj = response;
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
-
           var result:ResultsObj = response;
           result.filteredResults = this.txtUser?result.results.filter( r => r.name.includes(this.txtUser)):result.results;
+
+
+          console.log(result.filteredResults[0]?.name + ' ' + result.filteredResults[0]?.start);
+
           this.resultsObjArray.push(  result );
-
-          console.log('aaa' + this.txtUser)
-
         });
-
       });
     });
-
   }
-
 
 }

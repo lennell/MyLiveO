@@ -64,8 +64,9 @@
                   <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
                   <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
                   <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
-                  <tds-header-cell column-key="club" column-title="Club"></tds-header-cell>
-                  <tds-header-cell column-key="result" column-title="result"></tds-header-cell>
+                  <tds-header-cell column-key="start" column-title="Start"></tds-header-cell>
+                  <tds-header-cell column-key="split" column-title="Split"></tds-header-cell>
+                  <tds-header-cell column-key="result" column-title="Result"></tds-header-cell>
                   <tds-header-cell column-key="status" column-title="Status"></tds-header-cell>
                   <tds-header-cell column-key="progress" column-title="Progress"></tds-header-cell>
                 </tds-table-header>
@@ -81,9 +82,11 @@
                       {{r.name}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
-                      {{r.club}}
+                      {{r.start}}
                     </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
 
+                    </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.result}} <span style="font-size: smaller">({{r.timeplus}})</span>
                     </tds-body-cell>
