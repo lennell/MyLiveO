@@ -104,15 +104,6 @@ export class HomeComponent {
     (document.getElementById('tab1') as HTMLElement).click();
   }
 
-  clearForm() {
-    this.compList = [];
-    localStorage.removeItem('compList');
-    this.txtComp = '';
-    this.userList = [];
-    localStorage.removeItem('userList');
-    this.txtUser = '';
-  }
-
   backUser() {
     this.userList.pop();
     localStorage.setItem('userList',this.userList.toString())

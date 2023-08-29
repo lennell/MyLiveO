@@ -23,12 +23,6 @@
     </tds-link>
   </span>
 
-
-  <div  style="display:inline-block;float: right">
-    <button (click)="clearForm()">
-      Clear
-    </button>
-  </div>
 </tds-block>
 
 <tds-block class="tds-container">
@@ -90,7 +84,7 @@
 
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
-                      {{r.result}} ({{r.timeplus}})
+                      {{r.result}} <span style="font-size: smaller">({{r.timeplus}})</span>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}
