@@ -73,7 +73,9 @@
                 <tds-table-body *ngFor="let arr of resultsObjArray">
                   <tds-table-body-row *ngFor="let r of arr.filteredResults">
                     <tds-body-cell disable-padding="false">
-                     {{arr.className}}
+                      <tds-link>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{arr.className}}" target="_blank" >{{arr.className}}</a>
+                    </tds-link>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        {{r.place}}
@@ -134,7 +136,7 @@
               {{competitionInfo.date}}
               {{competitionInfo.organizer}}
             </p>
-           <!-- <tds-table vertical-dividers="true" compact-design="true" responsive="true" no-min-width>
+            <tds-table vertical-dividers="true" compact-design="true" responsive="true" no-min-width>
               <tds-table-header>
                 <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
               </tds-table-header>
@@ -143,12 +145,12 @@
 
                   <tds-body-cell disable-padding="false">
                     <tds-link>
-                      <a href="#" >{{cl.className}}</a>
+                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
                     </tds-link>
                   </tds-body-cell>
                 </tds-table-body-row>
               </tds-table-body>
-            </tds-table>-->
+            </tds-table>
           </span>
         </div>
 </tds-block>
