@@ -81,14 +81,14 @@
                     <tds-body-cell disable-padding="false" >
                       {{r.name}}
                     </tds-body-cell>
-                    <tds-body-cell disable-padding="false" >
-                      {{r.start}}
+                    <tds-body-cell disable-padding="false"  >
+                      {{toTimeString(r.start)}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
 
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
-                      {{r.result}} <span style="font-size: smaller">({{r.timeplus}})</span>
+                      {{r.result}} ({{r.timeplus}})
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}

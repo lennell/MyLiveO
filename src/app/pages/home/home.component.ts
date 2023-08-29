@@ -8,6 +8,7 @@ import {ClassesObj} from "../../models/classes";
 import {ResultsObj} from "../../models/results";
 
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -22,7 +23,7 @@ export class HomeComponent {
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
 
-  public todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
+  public readonly todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
@@ -33,6 +34,7 @@ export class HomeComponent {
 
   constructor(private service:LiveHttpServiceService) {
   }
+
 
   ngOnInit(): void {
     this.compList = []
@@ -52,7 +54,10 @@ export class HomeComponent {
     this.service.getCompetitions().subscribe( (response:object) => {
       // @ts-ignore
       response.competitions.forEach( c => {
-        this.competitionsOrig.push(c);
+        const firstDayOfYear = new Date(new Date().getFullYear(), 0, 1);
+        if (new Date(c.date) > firstDayOfYear) {
+          this.competitionsOrig.push(c);
+        }
       });
       this.competitions = this.competitionsOrig;
     });
@@ -60,10 +65,8 @@ export class HomeComponent {
       // @ts-ignore
       let id:number = parseInt(localStorage.getItem('compId'));
       this.clickCompetition(id);
-
     }
   }
-
 
   clickCompetition(id:number) {
     console.log(id)
@@ -72,12 +75,6 @@ export class HomeComponent {
       this.competitionInfo =  response;
       this.getUserFilterResult(id);
     });
-   /* this.service.getClasses(id).subscribe( (response:ClassesObj) => {
-      this.classesObj = response;
-    });
-*/
-    //this.classesObj = new ClassesObj();
-    //console.log("check " + this.classesObj.status)
     (document.getElementById('tab0') as HTMLElement).click();
   }
 
@@ -119,6 +116,10 @@ export class HomeComponent {
   backUser() {
     this.userList.pop();
     localStorage.setItem('userList',this.userList.toString())
+    if (!this.userList.length) {
+      this.txtUser='';
+      this.getUserFilterResult(this.competitionInfo.id)
+    }
   }
   backComp() {
     this.compList.pop();
@@ -142,6 +143,13 @@ export class HomeComponent {
     return comp.filter( c => c.date === this.todayDate);
   }
 
+   toTimeString(start: number) {
+     let h =  Math.floor(start/100/3600);
+     let m = Math.floor((start-h*360000)/6000);
+     let s = Math.floor((start-h*360000-m*6000)/100) ;
+     return ''+h+':'+m.toString().padStart(2,'0')+':'+s.toString().padStart(2,'0');
+  }
+
   getUserFilterResult(id:number){
     //console.log("check again " + this.classesObj.status)
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
@@ -151,9 +159,6 @@ export class HomeComponent {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
           var result:ResultsObj = response;
           result.filteredResults = this.txtUser?result.results.filter( r => r.name.includes(this.txtUser)):result.results;
-
-
-          console.log(result.filteredResults[0]?.name + ' ' + result.filteredResults[0]?.start);
 
           this.resultsObjArray.push(  result );
         });
