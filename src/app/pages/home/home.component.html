@@ -53,22 +53,24 @@
 
               <button type="button" (click)="submitFormUser()">>></button>
 
-              <tds-table vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
+              <div *ngFor="let cl of classesObj.classes">
+              <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
                   <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
                   <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
                   <tds-header-cell column-key="start" column-title="Start"></tds-header-cell>
+
                   <tds-header-cell column-key="split" column-title="Split"></tds-header-cell>
                   <tds-header-cell column-key="result" column-title="Result"></tds-header-cell>
                   <tds-header-cell column-key="status" column-title="Status"></tds-header-cell>
                   <tds-header-cell column-key="progress" column-title="Progress"></tds-header-cell>
                 </tds-table-header>
-                <tds-table-body *ngFor="let arr of resultsObjArray">
-                  <tds-table-body-row *ngFor="let r of arr.filteredResults">
+                <tds-table-body >
+                  <tds-table-body-row *ngFor="let r of cl?._resultsObj?._filteredResults">
                     <tds-body-cell disable-padding="false">
                       <tds-link>
-                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{arr.className}}" target="_blank" >{{arr.className}}</a>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
 
                       </tds-link>
                     </tds-body-cell>
@@ -82,10 +84,16 @@
                       {{toTimeString(r.start)}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
-
+                      <span *ngFor="let sc of cl._resultsObj.splitcontrols">
+                      {{sc.code}}<br>
+                      </span>
                     </tds-body-cell>
-                    <tds-body-cell disable-padding="false">
-                      {{r.result}} <span style="font-size: smaller">({{r.timeplus}})</span>
+                    <tds-body-cell disable-padding="false" >
+                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
+                         {{'('+r.splits[sc.code+'_place']+')'}}
+                          {{toTimeString(r.splits[sc.code])}}<br>
+                      </span>
+                      {{'('+r.place+')'}} {{r.result}}<br><span style="font-size: smaller">    ({{r.timeplus}})</span>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}
@@ -97,7 +105,7 @@
                   </tds-table-body-row>
                 </tds-table-body>
               </tds-table>
-
+              </div>
           </span>
           <span [hidden]="1 !== selectedIndex">
         <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>

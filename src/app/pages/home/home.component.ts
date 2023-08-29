@@ -27,7 +27,7 @@ export class HomeComponent {
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
-  public resultsObjArray: ResultsObj[] = [];
+
   protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -144,16 +144,14 @@ export class HomeComponent {
   getUserFilterResult(id:number){
     //console.log("check again " + this.classesObj.status)
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
-      this.resultsObjArray = [];
       this.classesObj = response;
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
-          var result:ResultsObj = response;
-          result.filteredResults = this.txtUser?result.results.filter(
-            r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser)
-          ):result.results;
+          c._resultsObj = response;
+          c._resultsObj._filteredResults = this.txtUser?c._resultsObj.results.filter(
+              r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser)
+            ):c._resultsObj.results;
 
-          this.resultsObjArray.push(  result );
         });
       });
     });
