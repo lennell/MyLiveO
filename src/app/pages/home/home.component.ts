@@ -149,7 +149,9 @@ export class HomeComponent {
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
           var result:ResultsObj = response;
-          result.filteredResults = this.txtUser?result.results.filter( r => r.name.includes(this.txtUser)):result.results;
+          result.filteredResults = this.txtUser?result.results.filter(
+            r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser)
+          ):result.results;
 
           this.resultsObjArray.push(  result );
         });

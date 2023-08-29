@@ -7,7 +7,7 @@
     <tds-link><a (click)="backComp()" href="#"><<</a></tds-link>
   </span>
   <br/>
-  User Filter:
+  User/Club Filter:
   <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px">
     <tds-link ><a (click)="selectFilterUser(u)" href="#">{{u}}</a></tds-link>
   </span>
@@ -69,12 +69,13 @@
                     <tds-body-cell disable-padding="false">
                       <tds-link>
                         <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{arr.className}}" target="_blank" >{{arr.className}}</a>
-                    </tds-link>
+
+                      </tds-link>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        {{r.place}}
                     </tds-body-cell>
-                    <tds-body-cell disable-padding="false" >
+                    <tds-body-cell disable-padding="false" title="{{r.club}}" >
                       {{r.name}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false"  >
