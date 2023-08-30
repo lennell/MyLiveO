@@ -54,7 +54,7 @@
               <button type="button" (click)="submitFormUser()">>></button>
 
               <div *ngFor="let cl of classesObj.classes">
-              <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="true" no-min-width>
+              <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
                   <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
@@ -90,10 +90,9 @@
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        <span *ngFor="let sc of cl._resultsObj.splitcontrols">
-                         {{'('+r.splits[sc.code+'_place']+')'}}
-                          {{toTimeString(r.splits[sc.code])}}<br>
+                         {{'('+r.splits[sc.code+'_place']+')&nbsp;'+toTimeString(r.splits[sc.code])}}<br>
                       </span>
-                      {{'('+r.place+')'}} {{r.result}}<br><span style="font-size: smaller">    ({{r.timeplus}})</span>
+                      {{'('+r.place+')&nbsp;'+r.result}}<br><span style="font-size: smaller">    ({{r.timeplus}})</span>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}
