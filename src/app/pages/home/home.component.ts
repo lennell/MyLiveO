@@ -49,7 +49,8 @@ export class HomeComponent {
       this.userList = localStorage.getItem('userList')?.split(',');
     }
     if (this.userList){
-      this.txtUser = this.userList[0]
+      this.txtUser = this.userList[0];
+
     }
     this.service.getCompetitions().subscribe( (response:object) => {
       // @ts-ignore
@@ -97,6 +98,15 @@ export class HomeComponent {
   doFilterComp() {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtComp));
   }
+
+  doFilterUser() {
+    console.log('aaa')
+    if (!this.txtUser.length) {
+      console.log('bbb')
+      this.getUserFilterResult(this.competitionInfo.id);
+    }
+  }
+
 
   selectFilterComp(value:string) {
     this.txtComp = value;

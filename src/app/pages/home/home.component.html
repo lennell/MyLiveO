@@ -48,10 +48,11 @@
                         autofocus
                         required
                         placeholder="Filter"
+                        (ngModelChange)="doFilterUser()"
                         [ngModelOptions]="{standalone: true}">
               </div>
 
-              <button type="button" (click)="submitFormUser()">>></button>
+              <button type="button" (click)="submitFormUser()">Save</button>
 
               <div *ngFor="let cl of classesObj.classes">
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
@@ -119,7 +120,7 @@
                       [ngModelOptions]="{standalone: true}">
             </div>
 
-            <button type="button" (click)="submitFormComp()">>></button>
+            <button type="button" (click)="submitFormComp()">Save</button>
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
