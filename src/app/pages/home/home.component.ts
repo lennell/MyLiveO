@@ -29,7 +29,7 @@ export class HomeComponent {
   public classesObj: ClassesObj = new ClassesObj();
 
   protected readonly JSON = JSON;
-  selectedIndex: number = 1;
+  selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
   constructor(private service:LiveHttpServiceService) {
@@ -65,7 +65,11 @@ export class HomeComponent {
     if (localStorage.getItem('compId')){
       // @ts-ignore
       let id:number = parseInt(localStorage.getItem('compId'));
-      this.clickCompetition(id);
+      console.log("xxx1")
+      if (this.txtUser) {
+        console.log("xxx2")
+        this.clickCompetition(id);
+      }
     }
   }
 
@@ -99,13 +103,6 @@ export class HomeComponent {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtComp));
   }
 
-  doFilterUser() {
-    console.log('aaa')
-    if (!this.txtUser.length) {
-      console.log('bbb')
-      this.getUserFilterResult(this.competitionInfo.id);
-    }
-  }
 
 
   selectFilterComp(value:string) {
@@ -125,6 +122,11 @@ export class HomeComponent {
   backComp() {
     this.compList.pop();
     localStorage.setItem('compList',this.compList.toString());
+  }
+
+  clearFormUser(){
+    this.txtUser='';
+    this.getUserFilterResult(this.competitionInfo.id)
   }
 
   submitFormUser() {
