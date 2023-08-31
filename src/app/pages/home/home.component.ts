@@ -29,7 +29,7 @@ export class HomeComponent {
   public classesObj: ClassesObj = new ClassesObj();
 
   protected readonly JSON = JSON;
-  selectedIndex: number = 0;
+  selectedIndex: number = 1;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
   constructor(private service:LiveHttpServiceService) {
