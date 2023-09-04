@@ -65,9 +65,7 @@ export class HomeComponent {
     if (localStorage.getItem('compId')){
       // @ts-ignore
       let id:number = parseInt(localStorage.getItem('compId'));
-      console.log("xxx1")
       if (this.txtUser) {
-        console.log("xxx2")
         this.clickCompetition(id);
       }
     }
@@ -102,8 +100,6 @@ export class HomeComponent {
   doFilterComp() {
     this.competitions = this.competitionsOrig.filter( c => c.name.includes(this.txtComp));
   }
-
-
 
   selectFilterComp(value:string) {
     this.txtComp = value;
@@ -142,17 +138,16 @@ export class HomeComponent {
     (document.getElementById('tab0') as HTMLElement).click();
   }
 
-  filterToday(comp: Competition[]) {
-    return comp.filter( c => c.date === this.todayDate);
-  }
-
-   toTimeString(start: number) {
+  toTimeString(start: number) {
      let h =  Math.floor(start/100/3600);
      let m = Math.floor((start-h*360000)/6000);
      let s = Math.floor((start-h*360000-m*6000)/100) ;
      return ''+h+':'+m.toString().padStart(2,'0')+':'+s.toString().padStart(2,'0');
   }
 
+  filterToday(comp: Competition[]) {
+    return comp.filter( c => c.date === this.todayDate);
+  }
   getUserFilterResult(id:number){
     //console.log("check again " + this.classesObj.status)
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
@@ -169,4 +164,17 @@ export class HomeComponent {
     });
   }
 
+  includeOldComp() {
+    this.service.getCompetitions().subscribe( (response:object) => {
+      // @ts-ignore
+      response.competitions.forEach( c => {
+          this.competitionsOrig.push(c);
+      });
+      this.competitions = this.competitionsOrig;
+    });
+
+  }
 }
+
+
+

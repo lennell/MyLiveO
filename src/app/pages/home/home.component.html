@@ -15,13 +15,6 @@
     <tds-link><a (click)="backUser()" href="#"><<</a></tds-link>
   </span>
   <br/>
-  Today:
-
-  <span *ngFor="let c of filterToday(competitionsOrig)" style="display:inline-block;margin-left: 10px">
-    <tds-link>
-      <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
-    </tds-link>
-  </span>
 
 </tds-block>
 
@@ -57,13 +50,7 @@
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class">aaa</tds-header-cell>
-<!--
-                  <tds-header-cell column-key="place" column-title="#"></tds-header-cell>
--->
                   <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
-<!--
-                  <tds-header-cell column-key="start" column-title="Start"></tds-header-cell>
--->
                   <tds-header-cell column-key="split" column-title="Split"></tds-header-cell>
                   <tds-header-cell column-key="result" column-title="Result"></tds-header-cell>
                   <tds-header-cell column-key="status" column-title="Status"></tds-header-cell>
@@ -77,17 +64,9 @@
 
                       </tds-link>
                     </tds-body-cell>
-                   <!-- <tds-body-cell disable-padding="false" >
-
-                    </tds-body-cell>-->
                     <tds-body-cell disable-padding="false" >
                     ({{r.place}}) {{r.name}}  {{toTimeString(r.start)}}
                     </tds-body-cell>
-<!--
-                    <tds-body-cell disable-padding="false"  >
-
-                    </tds-body-cell>
--->
                     <tds-body-cell disable-padding="false" >
                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
                       {{sc.code}}<br>
@@ -97,7 +76,7 @@
                        <span *ngFor="let sc of cl._resultsObj.splitcontrols">
                          {{'('+r.splits[sc.code+'_place']+')&nbsp;'+toTimeString(r.splits[sc.code])}}<br>
                       </span>
-                      {{'('+r.place+')&nbsp;'+r.result}}<br><span>    ({{r.timeplus}})</span>
+                      {{'('+r.place+')&nbsp;'+r.result}}<br><span>&nbsp;&nbsp;{{r.timeplus}}</span>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}
@@ -125,6 +104,17 @@
             </div>
 
             <button type="button" (click)="submitFormComp()">Save</button>
+            <button type="button" (click)="includeOldComp()">Old</button>
+
+            <div>
+            Today:
+              <span *ngFor="let c of filterToday(competitions)" style="display:inline-block;margin-left: 10px">
+                <tds-link>
+                <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
+                </tds-link>
+              </span>
+            </div>
+
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
