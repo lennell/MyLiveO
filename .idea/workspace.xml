@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/main.214eea93932e2253.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/main.6d1e9663d32f554b.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.b825c3672112bd0c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.214eea93932e2253.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,7 +154,10 @@
       <workItem from="1693592269991" duration="979000" />
       <workItem from="1693802668760" duration="3696000" />
       <workItem from="1693818723553" duration="1231000" />
-      <workItem from="1693821630137" duration="74000" />
+      <workItem from="1693821630137" duration="247000" />
+      <workItem from="1693829678899" duration="1117000" />
+      <workItem from="1693841769493" duration="501000" />
+      <workItem from="1693842282957" duration="1892000" />
     </task>
     <task id="LOCAL−00003" summary="a">
       <created>1692705407678</created>
@@ -317,7 +321,13 @@
       <option name="presentableId" value="LOCAL−00029" />
       <updated>1693819988709</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL−00030" summary="Med splits">
+      <created>1693821717614</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1693821717614</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -74,10 +74,17 @@ export class HomeComponent {
   clickCompetition(id:number) {
     console.log(id)
     localStorage.setItem('compId',id.toString());
-    this.service.getCompetitionInfo(id).subscribe((response:CompetitionInfo) => {
-      this.competitionInfo =  response;
-      this.getUserFilterResult(id);
-    });
+
+      this.service.getCompetitionInfo(id).subscribe((response: CompetitionInfo) => {
+        this.competitionInfo = response;
+        if (this.txtUser) {
+          this.getUserFilterResult(id);
+        } else {
+          console.log('aaaa')
+          this.classesObj = new ClassesObj();
+        }
+      });
+
     (document.getElementById('tab0') as HTMLElement).click();
   }
 
@@ -111,8 +118,9 @@ export class HomeComponent {
     this.userList.pop();
     localStorage.setItem('userList',this.userList.toString())
     if (!this.userList.length) {
-      this.txtUser='';
-      this.getUserFilterResult(this.competitionInfo.id)
+       //this.getUserFilterResult(this.competitionInfo.id)
+      this.txtUser = '';
+      this.classesObj = new ClassesObj();
     }
   }
   backComp() {
@@ -120,9 +128,14 @@ export class HomeComponent {
     localStorage.setItem('compList',this.compList.toString());
   }
 
-  clearFormUser(){
+  allUser(){
     this.txtUser='';
     this.getUserFilterResult(this.competitionInfo.id)
+  }
+  clearUser(){
+    if (!this.txtUser) {
+      this.classesObj = new ClassesObj();
+    }
   }
 
   submitFormUser() {

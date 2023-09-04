@@ -40,10 +40,11 @@
                         name="txtUser"
                         autofocus
                         required
-                        placeholder="Filter"
+                        placeholder="Add filter.."
+                        (ngModelChange)="clearUser()"
                         [ngModelOptions]="{standalone: true}">
               </div>
-              <button type="button" (click)="clearFormUser()">Clear</button>
+              <button type="button" (click)="allUser()">All</button>
               <button type="button" (click)="submitFormUser()">Save</button>
 
               <div *ngFor="let cl of classesObj.classes">
