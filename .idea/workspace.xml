@@ -7,10 +7,8 @@
     <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.a927a0883b7cf0e6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.818b2303fb3d27b0.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,9 +40,6 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UL2Pf6rluUOQVR375fJMQ1gSgV" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -152,7 +147,8 @@
       <workItem from="1693552515212" duration="732000" />
       <workItem from="1693553552223" duration="669000" />
       <workItem from="1693592269991" duration="979000" />
-      <workItem from="1693802668760" duration="3624000" />
+      <workItem from="1693802668760" duration="3696000" />
+      <workItem from="1693818723553" duration="1164000" />
     </task>
     <task id="LOCAL−00003" summary="a">
       <created>1692705407678</created>
@@ -304,7 +300,13 @@
       <option name="presentableId" value="LOCAL−00027" />
       <updated>1693593229864</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL−00028" summary="Med splits">
+      <created>1693806357395</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1693806357395</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -322,7 +324,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="a" />
     <MESSAGE value="Classes" />
     <MESSAGE value="Med splits" />
