@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/main.214eea93932e2253.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.818b2303fb3d27b0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.b825c3672112bd0c.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +41,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2UL2Pf6rluUOQVR375fJMQ1gSgV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -148,7 +152,8 @@
       <workItem from="1693553552223" duration="669000" />
       <workItem from="1693592269991" duration="979000" />
       <workItem from="1693802668760" duration="3696000" />
-      <workItem from="1693818723553" duration="1164000" />
+      <workItem from="1693818723553" duration="1231000" />
+      <workItem from="1693821630137" duration="74000" />
     </task>
     <task id="LOCAL−00003" summary="a">
       <created>1692705407678</created>
@@ -306,7 +311,13 @@
       <option name="presentableId" value="LOCAL−00028" />
       <updated>1693806357395</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL−00029" summary="Med splits">
+      <created>1693819988709</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1693819988709</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
