@@ -40,16 +40,16 @@
                         (ngModelChange)="clearUser()"
                         [ngModelOptions]="{standalone: true}">
               </div>
-              <button type="button" (click)="allUser()">All</button>
               <button type="button" (click)="submitFormUser()">Save</button>
+              <button type="button" (click)="allUser()">All</button>
 
               <div *ngFor="let cl of classesObj.classes">
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class">aaa</tds-header-cell>
                   <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
-                  <tds-header-cell column-key="split" column-title="Split"></tds-header-cell>
-                  <tds-header-cell column-key="result" column-title="Result"></tds-header-cell>
+                  <tds-header-cell column-key="split" column-title="#"></tds-header-cell>
+                  <tds-header-cell column-key="result" column-title="Splits"></tds-header-cell>
                   <tds-header-cell column-key="status" column-title="Status"></tds-header-cell>
                   <tds-header-cell column-key="progress" column-title="Progress"></tds-header-cell>
                 </tds-table-header>
@@ -66,14 +66,15 @@
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
-                      {{sc.code}}<br>
+                      {{'('+r.splits[sc.code+'_place']+')'}}<br>
                       </span>
+                      {{'('+r.place+')'}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        <span *ngFor="let sc of cl._resultsObj.splitcontrols">
-                         {{'('+r.splits[sc.code+'_place']+')&nbsp;'+toTimeString(r.splits[sc.code])}}<br>
+                         {{toTimeString(r.splits[sc.code])}}<br>
                       </span>
-                      {{'('+r.place+')&nbsp;'+r.result}}<br><span>&nbsp;&nbsp;{{r.timeplus}}</span>
+                       {{r.result}}<br><span>&nbsp;&nbsp;{{r.timeplus}}</span>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false">
                       {{r.status}}
