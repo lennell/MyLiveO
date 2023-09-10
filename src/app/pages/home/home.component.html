@@ -67,13 +67,13 @@
                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
                       {{r.splits[sc.code+'_place']}}<br>
                       </span>
-                      {{r.place}}
+                      <b>{{r.place}}</b>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        <span *ngFor="let sc of cl._resultsObj.splitcontrols">
                          {{toTimeString(r.splits[sc.code])}}<br>
                       </span>
-                       {{r.result}}<br><span>&nbsp;&nbsp;{{r.timeplus}}</span>
+                      <b>{{toTimeString(r.result)}}</b><br><span style="font-size: smaller">+{{toTimeString(r.timeplus)}}</span>
                     </tds-body-cell>
 
                     <tds-body-cell disable-padding="false">

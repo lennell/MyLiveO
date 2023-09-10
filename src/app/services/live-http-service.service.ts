@@ -29,7 +29,7 @@ export class LiveHttpServiceService {
   }
 
   getClassResults(id:number,clas:string):Observable<ResultsObj>{
-    return this.http.get<ResultsObj>(this.API_URL+'?comp='+id+'&method=getclassresults&unformattedTimes=false&class='+clas);
+    return this.http.get<ResultsObj>(this.API_URL+'?comp='+id+'&method=getclassresults&unformattedTimes=true&class='+clas);
   }
 
 }

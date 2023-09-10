@@ -16,9 +16,9 @@ export class Result {
   place: string
   name: string
   club: string
-  result: string
+  result: number
   status: number
-  timeplus: string
+  timeplus: number
   progress: number
   start: number
   splits: any
