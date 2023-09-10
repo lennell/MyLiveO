@@ -61,13 +61,13 @@
                       </tds-link>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
-                    ({{r.place}}) {{r.name}}  {{toTimeString(r.start)}}
+                    {{r.name}}  {{toTimeString(r.start)}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
-                      {{'('+r.splits[sc.code+'_place']+')'}}<br>
+                      {{r.splits[sc.code+'_place']}}<br>
                       </span>
-                      {{'('+r.place+')'}}
+                      {{r.place}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                        <span *ngFor="let sc of cl._resultsObj.splitcontrols">
