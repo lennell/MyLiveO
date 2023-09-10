@@ -189,6 +189,22 @@ export class HomeComponent {
     });
 
   }
+
+  isRelay(className:string):boolean{
+    return this.competitionInfo.name.toLowerCase().includes('stafett') || className.includes('-')
+  }
+
+  doTrunc(className: string) {
+    if (this.isRelay(className)){
+     return className.substring(0,4) + className.substring(className.indexOf('-'),className.length);
+    } else {
+      return className;
+    }
+  }
+
+  printClub(club: string,className:string) {
+    return this.isRelay(className)?club:'';
+  }
 }
 
 

@@ -56,12 +56,12 @@
                   <tds-table-body-row *ngFor="let r of cl?._resultsObj?._filteredResults">
                     <tds-body-cell disable-padding="false">
                       <tds-link>
-                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
 
                       </tds-link>
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
-                    {{r.name}}  {{toTimeString(r.start)}}
+                    {{r.name}}<br>{{printClub(r.club,cl.className)}}<br>{{toTimeString(r.start)}}
                     </tds-body-cell>
                     <tds-body-cell disable-padding="false" >
                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
