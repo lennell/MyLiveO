@@ -48,10 +48,11 @@ export class HomeComponent {
       // @ts-ignore
       this.userList = localStorage.getItem('userList')?.split(',');
     }
+
     if (this.userList){
       this.txtUser = this.userList[0];
-
     }
+
     this.service.getCompetitions().subscribe( (response:object) => {
       // @ts-ignore
       response.competitions.forEach( c => {
@@ -62,12 +63,13 @@ export class HomeComponent {
       });
       this.competitions = this.competitionsOrig;
     });
+
     if (localStorage.getItem('compId')){
+
       // @ts-ignore
       let id:number = parseInt(localStorage.getItem('compId'));
-      if (this.txtUser) {
         this.clickCompetition(id);
-      }
+
     }
   }
 
