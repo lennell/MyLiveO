@@ -5,7 +5,7 @@ import {Competition} from "../../models/competition";
 import {LiveHttpServiceService} from "../../services/live-http-service.service";
 import {CompetitionInfo} from "../../models/competition-info";
 import {ClassesObj} from "../../models/classes";
-import {ResultsObj} from "../../models/results";
+import {Result, ResultsObj} from "../../models/results";
 
 
 
@@ -22,6 +22,7 @@ export class HomeComponent {
   public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
+  private clubLastResult:number[];
 
   public readonly todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
 
@@ -39,6 +40,7 @@ export class HomeComponent {
   ngOnInit(): void {
     this.compList = []
     this.userList = []
+    this.clubLastResult=[0,0,0,0,0,0,0,0]
     console.log('init');
     if (localStorage.getItem('compList')){
       // @ts-ignore
@@ -49,8 +51,10 @@ export class HomeComponent {
       this.userList = localStorage.getItem('userList')?.split(',');
     }
 
-    if (this.userList){
+    if (this.userList.length){
       this.txtUser = this.userList[0];
+    } else {
+      this.txtUser = 'Strängnäs';
     }
 
     this.service.getCompetitions().subscribe( (response:object) => {
@@ -171,7 +175,7 @@ export class HomeComponent {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
           c._resultsObj = response;
           c._resultsObj._filteredResults = this.txtUser?c._resultsObj.results.filter(
-              r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser)
+            (r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser) && !r.name.includes('vacant'))
             ):c._resultsObj.results;
 
         });
@@ -204,6 +208,26 @@ export class HomeComponent {
 
   printClub(club: string,className:string) {
     return this.isRelay(className)?club:'';
+  }
+
+
+
+  findLegResult(r: Result,className:string) {
+    if (!this.isRelay(className)){
+      return '';
+    }
+    // let clubNumber:number = +r.club.charAt(r.club.length-1);
+    // console.log("a " + clubNumber + ' ' + r.result);
+    //
+    // let lapResult:string='';
+    // if (+className.charAt(className.length-1)==1){
+    //   lapResult = this.toTimeString(r.result);
+    // } else {
+    //   lapResult = this.toTimeString(r.result-this.clubLastResult[clubNumber-1]);
+    // }
+    // this.clubLastResult[clubNumber-1] = r.result;
+    // return lapResult;
+    return '';
   }
 }
 
