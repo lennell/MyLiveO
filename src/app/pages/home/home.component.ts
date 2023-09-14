@@ -22,13 +22,12 @@ export class HomeComponent {
   public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
-  private clubLastResult:number[];
 
   public readonly todayDate = formatDate(new Date(),'yyyy-MM-dd','en');
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
-
+  private compStart:number = 0;
   protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -36,12 +35,11 @@ export class HomeComponent {
   constructor(private service:LiveHttpServiceService) {
   }
 
-
   ngOnInit(): void {
     this.compList = []
     this.userList = []
-    this.clubLastResult=[0,0,0,0,0,0,0,0]
-    console.log('init');
+    console.log('init')
+
     if (localStorage.getItem('compList')){
       // @ts-ignore
       this.compList = localStorage.getItem('compList')?.split(',');
@@ -78,6 +76,7 @@ export class HomeComponent {
   }
 
   clickCompetition(id:number) {
+
     console.log(id)
     localStorage.setItem('compId',id.toString());
 
@@ -86,7 +85,7 @@ export class HomeComponent {
         if (this.txtUser) {
           this.getUserFilterResult(id);
         } else {
-          console.log('aaaa')
+
           this.classesObj = new ClassesObj();
         }
       });
@@ -102,6 +101,8 @@ export class HomeComponent {
         this.selectedIndex = selectedTabIndex;
         console.log(this.selectedIndex);
       });
+
+
     }
   }
 
@@ -168,7 +169,7 @@ export class HomeComponent {
     return comp.filter( c => c.date === this.todayDate);
   }
   getUserFilterResult(id:number){
-    //console.log("check again " + this.classesObj.status)
+
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
       this.classesObj.classes.forEach( c => {
@@ -177,6 +178,14 @@ export class HomeComponent {
           c._resultsObj._filteredResults = this.txtUser?c._resultsObj.results.filter(
             (r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser) && !r.name.includes('vacant'))
             ):c._resultsObj.results;
+
+          if (this.isRelay(c.className)){
+            console.log('back ' + c.className)
+            let classNumber:number = +c.className.charAt(c.className.length-1);
+            if (classNumber==1) {
+              this.compStart = c._resultsObj._filteredResults[0].start;
+            }
+          }
 
         });
       });
@@ -210,26 +219,11 @@ export class HomeComponent {
     return this.isRelay(className)?club:'';
   }
 
-
-
   findLegResult(r: Result,className:string) {
     if (!this.isRelay(className)){
       return '';
     }
-    // let clubNumber:number = +r.club.charAt(r.club.length-1);
-    // console.log("a " + clubNumber + ' ' + r.result);
-    //
-    // let lapResult:string='';
-    // if (+className.charAt(className.length-1)==1){
-    //   lapResult = this.toTimeString(r.result);
-    // } else {
-    //   lapResult = this.toTimeString(r.result-this.clubLastResult[clubNumber-1]);
-    // }
-    // this.clubLastResult[clubNumber-1] = r.result;
-    // return lapResult;
-    return '';
+    return this.toTimeString(r.result- (r.start-this.compStart))
+
   }
 }
-
-
-
