@@ -49,11 +49,10 @@ export class HomeComponent {
       this.userList = localStorage.getItem('userList')?.split(',');
     }
 
-    if (this.userList.length){
-      this.txtUser = this.userList[0];
-    } else {
-      this.txtUser = 'Strängnäs';
+    if (!this.userList.length){
+      this.userList.push( 'Strängnäs');
     }
+    this.txtUser = this.userList[0];
 
     this.service.getCompetitions().subscribe( (response:object) => {
       // @ts-ignore
