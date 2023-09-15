@@ -27,7 +27,7 @@ export class HomeComponent {
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
-  private compStart:number = 0;
+  private firsStart:number = 0;
   protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -179,10 +179,9 @@ export class HomeComponent {
             ):c._resultsObj.results;
 
           if (this.isRelay(c.className)){
-            console.log('back ' + c.className)
             let classNumber:number = +c.className.charAt(c.className.length-1);
             if (classNumber==1) {
-              this.compStart = c._resultsObj._filteredResults[0].start;
+              this.firsStart = c._resultsObj.results[0].start;
             }
           }
 
@@ -222,7 +221,7 @@ export class HomeComponent {
     if (!this.isRelay(className)){
       return '';
     }
-    return this.toTimeString(r.result- (r.start-this.compStart))
+    return this.toTimeString(r.result- (r.start-this.firsStart))
 
   }
 }

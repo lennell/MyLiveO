@@ -1,5 +1,5 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
-  Comp:
+  Event:
   <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px;font-size: smaller">
     <tds-link ><a (click)="selectFilterComp(s)" href="#">{{s}}</a></tds-link>
   </span>
@@ -7,7 +7,7 @@
     <tds-link><a (click)="backComp()" href="#"><<</a></tds-link>
   </span>
   <br/>
-  User/Club:
+  Runner/Club:
   <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px;font-size: smaller">
     <tds-link ><a (click)="selectFilterUser(u)" href="#">{{u}}</a></tds-link>
   </span>
@@ -46,7 +46,7 @@
               <div *ngFor="let cl of classesObj.classes">
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
                 <tds-table-header>
-                  <tds-header-cell column-key="className" column-title="Class">aaa</tds-header-cell>
+                  <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
                   <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
                   <tds-header-cell column-key="split" column-title="#"></tds-header-cell>
                   <tds-header-cell column-key="result" column-title="Splits"></tds-header-cell>
