@@ -1,5 +1,5 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
-  Event:
+  Event filter:
   <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px;font-size: smaller">
     <tds-link ><a (click)="selectFilterComp(s)" href="#">{{s}}</a></tds-link>
   </span>
@@ -15,7 +15,7 @@
     <tds-link><a (click)="backUser()" href="#"><<</a></tds-link>
   </span>
   <br/>
-  <p *ngIf="competitionInfo">{{competitionInfo.id + ' ' + competitionInfo.name}}</p>
+  <p *ngIf="competitionInfo">{{competitionInfo.name}}</p>
         <tds-inline-tabs default-selected-index="0" #tabs>
           <tds-inline-tab>
             <button id="tab0">Live</button>
@@ -40,8 +40,11 @@
                         (ngModelChange)="clearUser()"
                         [ngModelOptions]="{standalone: true}">
               </div>
-              <button type="button" (click)="submitFormUser()">Save</button>
+              <button type="button" (click)="submitFormUser()">Filter</button>
               <button type="button" (click)="allUser()">All</button>
+             <tds-link style="margin-left: 10px">
+               <a href="#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
+             </tds-link>
 
               <div *ngFor="let cl of classesObj.classes">
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
@@ -99,7 +102,7 @@
                       [ngModelOptions]="{standalone: true}">
             </div>
 
-            <button type="button" (click)="submitFormComp()">Save</button>
+            <button type="button" (click)="submitFormComp()">Filter</button>
             <button type="button" (click)="includeOldComp()">Old</button>
 
             <div>

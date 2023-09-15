@@ -40,10 +40,12 @@ export class HomeComponent {
     this.userList = []
     console.log('init')
 
-    if (localStorage.getItem('compList')){
-      // @ts-ignore
-      this.compList = localStorage.getItem('compList')?.split(',');
+    if (!localStorage.getItem('compList')){
+      localStorage.setItem('compList','DM,U10');
     }
+    // @ts-ignore
+    this.compList = localStorage.getItem('compList')?.split(',');
+
     if (localStorage.getItem('userList')){
       // @ts-ignore
       this.userList = localStorage.getItem('userList')?.split(',');
@@ -65,18 +67,15 @@ export class HomeComponent {
       this.competitions = this.competitionsOrig;
     });
 
-    if (localStorage.getItem('compId')){
-
-      // @ts-ignore
-      let id:number = parseInt(localStorage.getItem('compId'));
-        this.clickCompetition(id);
-
+    if (!localStorage.getItem('compId')){
+      localStorage.setItem('compId','27574')
     }
+    // @ts-ignore
+    let id:number = parseInt(localStorage.getItem('compId'));
+    this.clickCompetition(id);
   }
 
   clickCompetition(id:number) {
-
-    console.log(id)
     localStorage.setItem('compId',id.toString());
 
       this.service.getCompetitionInfo(id).subscribe((response: CompetitionInfo) => {
@@ -151,6 +150,10 @@ export class HomeComponent {
     this.getUserFilterResult(this.competitionInfo.id);
   }
 
+  doReload() {
+    this.getUserFilterResult(this.competitionInfo.id);
+  }
+
   selectFilterUser(value:string) {
     this.txtUser = value;
     this.getUserFilterResult(this.competitionInfo.id);
@@ -202,7 +205,8 @@ export class HomeComponent {
   }
 
   isRelay(className:string):boolean{
-    return this.competitionInfo.name.toLowerCase().includes('stafett') || className.includes('-')
+    // @ts-ignore
+    return this.competitionInfo.name.toLowerCase().includes('stafett') || (className.includes('-')&& !isNaN(+className.split('-').pop()?.substring(0,1)))
   }
 
   doTrunc(className: string) {
@@ -224,4 +228,6 @@ export class HomeComponent {
     return this.toTimeString(r.result- (r.start-this.firsStart))
 
   }
+
+
 }
