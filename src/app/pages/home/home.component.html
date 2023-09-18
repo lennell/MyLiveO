@@ -15,7 +15,11 @@
     <tds-link><a (click)="backUser()" href="#"><<</a></tds-link>
   </span>
   <br/>
-  <p *ngIf="competitionInfo">{{competitionInfo.name}}</p>
+
+  <div style="display: inline-block">{{competitionInfo.name}}</div>
+  <div *ngIf="sendingStatus" style="display: inline-block;margin-left: 10px">
+    <tds-spinner size="xs" variant="standard"></tds-spinner>
+  </div>
         <tds-inline-tabs default-selected-index="0" #tabs>
           <tds-inline-tab>
             <button id="tab0">Live</button>

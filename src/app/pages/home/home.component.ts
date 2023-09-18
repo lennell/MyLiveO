@@ -28,6 +28,7 @@ export class HomeComponent {
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
   private firsStart:number = 0;
+  public sendingStatus=false;
   protected readonly JSON = JSON;
   selectedIndex: number = 0;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
@@ -174,6 +175,8 @@ export class HomeComponent {
 
     this.service.getClasses(id).subscribe( (response:ClassesObj) => {
       this.classesObj = response;
+      let lastClass =  this.classesObj.classes[this.classesObj.classes.length-1].className;
+      this.sendingStatus = true;
       this.classesObj.classes.forEach( c => {
         this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
           c._resultsObj = response;
@@ -186,6 +189,9 @@ export class HomeComponent {
             if (classNumber==1) {
               this.firsStart = c._resultsObj.results[0].start;
             }
+          }
+          if (c._resultsObj.className === lastClass){
+            this.sendingStatus = false;
           }
 
         });
