@@ -30,7 +30,7 @@ export class HomeComponent {
   private firsStart:number = 0;
   public sendingStatus=false;
   protected readonly JSON = JSON;
-  selectedIndex: number = 0;
+  selectedIndex: number = 1;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
   constructor(private service:LiveHttpServiceService) {
@@ -66,14 +66,15 @@ export class HomeComponent {
         }
       });
       this.competitions = this.competitionsOrig;
+
     });
 
-    if (!localStorage.getItem('compId')){
-      localStorage.setItem('compId','27574')
+    if (localStorage.getItem('compId')){
+      // @ts-ignore
+      let id:number = parseInt(localStorage.getItem('compId'));
+      this.clickCompetition(id);
     }
-    // @ts-ignore
-    let id:number = parseInt(localStorage.getItem('compId'));
-    this.clickCompetition(id);
+
   }
 
   clickCompetition(id:number) {
@@ -83,13 +84,14 @@ export class HomeComponent {
         this.competitionInfo = response;
         if (this.txtUser) {
           this.getUserFilterResult(id);
+          (document.getElementById('tab0') as HTMLElement).click();
         } else {
 
           this.classesObj = new ClassesObj();
         }
       });
 
-    (document.getElementById('tab0') as HTMLElement).click();
+
   }
 
   ngAfterViewInit() {
