@@ -27,7 +27,7 @@ export class HomeComponent {
 
   public competitionInfo: CompetitionInfo = new CompetitionInfo();
   public classesObj: ClassesObj = new ClassesObj();
-  private firsStart:number = 0;
+  private firsStartMap = new Map<string,number>();
   public sendingStatus=false;
   protected readonly JSON = JSON;
   selectedIndex: number = 1;
@@ -193,7 +193,7 @@ export class HomeComponent {
               let classNumber:number = +c.className.charAt(c.className.length-1);
               if (classNumber==1) {
                 console.log('fc ' + c.className.charAt(c.className.length-1))
-                this.firsStart = c._resultsObj.results[0].start;
+                this.firsStartMap.set(c.className.substring(0,3), c._resultsObj.results[0].start);
               }
             }
             if (c._resultsObj.className === lastClass){
@@ -237,7 +237,8 @@ export class HomeComponent {
     if (!this.isRelay(className)){
       return '';
     }
-    return this.toTimeString(r.result- (r.start-this.firsStart))
+    // @ts-ignore
+    return this.toTimeString(r.result- (r.start-this.firsStartMap.get(className.substring(0,3))))
 
   }
 
