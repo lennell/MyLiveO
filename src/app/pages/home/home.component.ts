@@ -174,31 +174,35 @@ export class HomeComponent {
     return comp.filter( c => c.date === this.todayDate);
   }
   getUserFilterResult(id:number){
+      if (this.sendingStatus){
+        return;
+      }
+      this.service.getClasses(id).subscribe( (response:ClassesObj) => {
+        this.classesObj = response;
+        let lastClass =  this.classesObj.classes[this.classesObj.classes.length-1].className;
+        this.sendingStatus = true;
+        console.log("ss " + this.sendingStatus)
+        this.classesObj.classes.forEach( c => {
+          this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
+            c._resultsObj = response;
+            c._resultsObj._filteredResults = this.txtUser?c._resultsObj.results.filter(
+              (r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser) && !r.name.includes('vacant'))
+              ):c._resultsObj.results;
 
-    this.service.getClasses(id).subscribe( (response:ClassesObj) => {
-      this.classesObj = response;
-      let lastClass =  this.classesObj.classes[this.classesObj.classes.length-1].className;
-      this.sendingStatus = true;
-      this.classesObj.classes.forEach( c => {
-        this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
-          c._resultsObj = response;
-          c._resultsObj._filteredResults = this.txtUser?c._resultsObj.results.filter(
-            (r => r.name.includes(this.txtUser) || r.club.includes(this.txtUser) && !r.name.includes('vacant'))
-            ):c._resultsObj.results;
-
-          if (this.isRelay(c.className)){
-            let classNumber:number = +c.className.charAt(c.className.length-1);
-            if (classNumber==1) {
-              this.firsStart = c._resultsObj.results[0].start;
+            if (this.isRelay(c.className)){
+              let classNumber:number = +c.className.charAt(c.className.length-1);
+              if (classNumber==1) {
+                console.log('fc ' + c.className.charAt(c.className.length-1))
+                this.firsStart = c._resultsObj.results[0].start;
+              }
             }
-          }
-          if (c._resultsObj.className === lastClass){
-            this.sendingStatus = false;
-          }
+            if (c._resultsObj.className === lastClass){
+              this.sendingStatus = false;
+            }
 
+          });
         });
       });
-    });
   }
 
   includeOldComp() {
