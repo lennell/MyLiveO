@@ -6,6 +6,7 @@ import {LiveHttpServiceService} from "../../services/live-http-service.service";
 import {CompetitionInfo} from "../../models/competition-info";
 import {ClassesObj} from "../../models/classes";
 import {Result, ResultsObj} from "../../models/results";
+import { NgxSpinnerService } from "ngx-spinner";
 
 
 
@@ -33,7 +34,8 @@ export class HomeComponent {
   selectedIndex: number = 1;
   @ViewChild('tabs', { static: true }) tabsRef: ElementRef | undefined;
 
-  constructor(private service:LiveHttpServiceService) {
+  constructor(private service:LiveHttpServiceService,
+              private spinner:NgxSpinnerService) {
   }
 
   ngOnInit(): void {
@@ -181,7 +183,7 @@ export class HomeComponent {
         this.classesObj = response;
         let lastClass =  this.classesObj.classes[this.classesObj.classes.length-1].className;
         this.sendingStatus = true;
-        console.log("ss " + this.sendingStatus)
+        this.spinner.show();
         this.classesObj.classes.forEach( c => {
           this.service.getClassResults(this.competitionInfo.id,c.className).subscribe((response:ResultsObj) => {
             c._resultsObj = response;
@@ -198,6 +200,7 @@ export class HomeComponent {
             }
             if (c._resultsObj.className === lastClass){
               this.sendingStatus = false;
+              this.spinner.hide();
             }
 
           });

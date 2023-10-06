@@ -17,9 +17,7 @@
   <br/>
 
   <div style="display: inline-block">{{competitionInfo.name}}</div>
-  <div *ngIf="sendingStatus" style="display: inline-block;margin-left: 10px">
-    <tds-spinner size="xs" variant="standard"></tds-spinner>
-  </div>
+    <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
         <tds-inline-tabs default-selected-index="1" #tabs>
           <tds-inline-tab>
             <button id="tab0">Live</button>
