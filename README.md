@@ -25,3 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+#Deploy to lennell.github.io
+
+After run 'ng build' it is possible to add to vcs a new "main....js" created in docs. Commit and push. It is the files
+in docs that is deployed as github pages
