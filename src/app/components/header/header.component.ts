@@ -18,4 +18,5 @@ export class HeaderComponent {
   getCurrentUrl(): string {
     return this.router.url;
   }
+
 }

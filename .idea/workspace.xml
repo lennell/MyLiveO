@@ -1,53 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="" />
+    <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CodeStyleSettingsInfer">
-    <option name="done" value="true" />
-  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9c7cc23f-1bb7-4825-8496-8822d47039fb" />
+        <option name="url" value="https://github.com/lennell/lennell.github.io.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
+  <component name="ProjectId" id="2UL2Pf6rluUOQVR375fJMQ1gSgV" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectId" id="2clO48bblEl8PDFJbMk05Tg17h5" />
   <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;aspect.path.notification.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/javadev/github/tegel/lennell.github.io&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
+    &quot;javascript.karma.karma_node_package_dir&quot;: &quot;C:/javadev/github/tegel/lennell.github.io/node_modules/@angular/cli&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\javadev\\github\\tegel\\lennell.github.io\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
-    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+  <component name="RunManager" selected="Karma.competition.spec.ts">
+    <configuration name="competition.spec.ts" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
+      <config-file value="" />
+      <karma-package-dir value="" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <scope-kind value="TEST_FILE" />
+      <test-file-path value="$PROJECT_DIR$/src/app/models/competition.spec.ts" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
     </configuration>
     <configuration name="Angular CLI Server" type="js.build_tools.npm">
       <package-json value="$PROJECT_DIR$/package.json" />
@@ -59,20 +87,431 @@
       <envs />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Karma.competition.spec.ts" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="" />
-      <created>1708682507617</created>
+      <changelist id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="" />
+      <created>1692704519066</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1708682507617</updated>
-      <workItem from="1708682510039" duration="482000" />
+      <updated>1692704519066</updated>
+      <workItem from="1692704520206" duration="838000" />
+      <workItem from="1692705379893" duration="3095000" />
+      <workItem from="1692768361715" duration="2297000" />
+      <workItem from="1692771669353" duration="1450000" />
+      <workItem from="1692775338531" duration="3056000" />
+      <workItem from="1692779353181" duration="2733000" />
+      <workItem from="1692782141777" duration="10000" />
+      <workItem from="1692798311437" duration="1304000" />
+      <workItem from="1692853388876" duration="1455000" />
+      <workItem from="1692856333686" duration="6940000" />
+      <workItem from="1692887106017" duration="1460000" />
+      <workItem from="1692943098008" duration="12000" />
+      <workItem from="1692959678809" duration="6054000" />
+      <workItem from="1692974432982" duration="262000" />
+      <workItem from="1693061073321" duration="140000" />
+      <workItem from="1693062788149" duration="412000" />
+      <workItem from="1693147452994" duration="7141000" />
+      <workItem from="1693198538200" duration="19708000" />
+      <workItem from="1693227801271" duration="3214000" />
+      <workItem from="1693284395758" duration="10062000" />
+      <workItem from="1693297032244" duration="172000" />
+      <workItem from="1693301027066" duration="2140000" />
+      <workItem from="1693322471088" duration="160000" />
+      <workItem from="1693370060863" duration="37000" />
+      <workItem from="1693398587225" duration="2942000" />
+      <workItem from="1693404917636" duration="989000" />
+      <workItem from="1693420823568" duration="131000" />
+      <workItem from="1693472340076" duration="326000" />
+      <workItem from="1693552266448" duration="14000" />
+      <workItem from="1693552515212" duration="732000" />
+      <workItem from="1693553552223" duration="669000" />
+      <workItem from="1693592269991" duration="979000" />
+      <workItem from="1693802668760" duration="3696000" />
+      <workItem from="1693818723553" duration="1231000" />
+      <workItem from="1693821630137" duration="247000" />
+      <workItem from="1693829678899" duration="1117000" />
+      <workItem from="1693841769493" duration="501000" />
+      <workItem from="1693842282957" duration="1919000" />
+      <workItem from="1693896651213" duration="846000" />
+      <workItem from="1694180003892" duration="86000" />
+      <workItem from="1694180285662" duration="114000" />
+      <workItem from="1694183047774" duration="50000" />
+      <workItem from="1694285279978" duration="455000" />
+      <workItem from="1694288297992" duration="1024000" />
+      <workItem from="1694354184988" duration="5174000" />
+      <workItem from="1694434197511" duration="422000" />
+      <workItem from="1694434636340" duration="14000" />
+      <workItem from="1694494510491" duration="4000" />
+      <workItem from="1694495562136" duration="1493000" />
+      <workItem from="1694497812158" duration="3015000" />
+      <workItem from="1694502210490" duration="15366000" />
+      <workItem from="1694538417261" duration="1137000" />
+      <workItem from="1694539644749" duration="11000" />
+      <workItem from="1694585161915" duration="1126000" />
+      <workItem from="1694595969816" duration="321000" />
+      <workItem from="1694597212752" duration="7133000" />
+      <workItem from="1694605653633" duration="99000" />
+      <workItem from="1694610621866" duration="591000" />
+      <workItem from="1694675140173" duration="4620000" />
+      <workItem from="1694701367856" duration="7042000" />
+      <workItem from="1694754646833" duration="4923000" />
+      <workItem from="1694764361065" duration="8671000" />
+      <workItem from="1695050334181" duration="1325000" />
+      <workItem from="1695052120347" duration="605000" />
+      <workItem from="1695103794400" duration="2518000" />
+      <workItem from="1695106882122" duration="245000" />
+      <workItem from="1695120643206" duration="538000" />
+      <workItem from="1695131797350" duration="24000" />
+      <workItem from="1695275621508" duration="1389000" />
+      <workItem from="1695299736960" duration="299000" />
+      <workItem from="1695300107431" duration="267000" />
+      <workItem from="1695389835558" duration="1108000" />
+      <workItem from="1695495820463" duration="254000" />
+      <workItem from="1695619465917" duration="750000" />
+      <workItem from="1695803488140" duration="310000" />
+      <workItem from="1695803926329" duration="1234000" />
+      <workItem from="1695820358242" duration="182000" />
+      <workItem from="1695885557711" duration="549000" />
+      <workItem from="1696336551620" duration="124000" />
+      <workItem from="1696342539486" duration="117000" />
+      <workItem from="1696343181415" duration="1972000" />
+      <workItem from="1696568732207" duration="4683000" />
+      <workItem from="1708515633976" duration="1636000" />
+      <workItem from="1708517779618" duration="166000" />
+      <workItem from="1708622052240" duration="11000" />
+      <workItem from="1708682026935" duration="265000" />
+      <workItem from="1708682664821" duration="99000" />
     </task>
+    <task id="LOCAL−00009" summary="Classes">
+      <created>1692854636505</created>
+      <option name="number" value="LOCAL−00009" />
+      <option name="presentableId" value="LOCAL−00009" />
+      <updated>1692854636505</updated>
+    </task>
+    <task id="LOCAL−00010" summary="Classes">
+      <created>1692856343129</created>
+      <option name="number" value="LOCAL−00010" />
+      <option name="presentableId" value="LOCAL−00010" />
+      <updated>1692856343129</updated>
+    </task>
+    <task id="LOCAL−00011" summary="Classes">
+      <created>1692888850155</created>
+      <option name="number" value="LOCAL−00011" />
+      <option name="presentableId" value="LOCAL−00011" />
+      <updated>1692888850155</updated>
+    </task>
+    <task id="LOCAL−00012" summary="Classes">
+      <created>1693150466049</created>
+      <option name="number" value="LOCAL−00012" />
+      <option name="presentableId" value="LOCAL−00012" />
+      <updated>1693150466049</updated>
+    </task>
+    <task id="LOCAL−00013" summary="Classes">
+      <created>1693159098754</created>
+      <option name="number" value="LOCAL−00013" />
+      <option name="presentableId" value="LOCAL−00013" />
+      <updated>1693159098754</updated>
+    </task>
+    <task id="LOCAL−00014" summary="Classes">
+      <created>1693216674745</created>
+      <option name="number" value="LOCAL−00014" />
+      <option name="presentableId" value="LOCAL−00014" />
+      <updated>1693216674745</updated>
+    </task>
+    <task id="LOCAL−00015" summary="Classes">
+      <created>1693216833814</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1693216833814</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Classes">
+      <created>1693224253127</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1693224253127</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Classes">
+      <created>1693296063591</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1693296063591</updated>
+    </task>
+    <task id="LOCAL−00018" summary="Classes">
+      <created>1693296974955</created>
+      <option name="number" value="LOCAL−00018" />
+      <option name="presentableId" value="LOCAL−00018" />
+      <updated>1693296974955</updated>
+    </task>
+    <task id="LOCAL−00019" summary="Classes">
+      <created>1693301772035</created>
+      <option name="number" value="LOCAL−00019" />
+      <option name="presentableId" value="LOCAL−00019" />
+      <updated>1693301772035</updated>
+    </task>
+    <task id="LOCAL−00020" summary="Classes">
+      <created>1693322186241</created>
+      <option name="number" value="LOCAL−00020" />
+      <option name="presentableId" value="LOCAL−00020" />
+      <updated>1693322186241</updated>
+    </task>
+    <task id="LOCAL−00021" summary="Med splits">
+      <created>1693322300186</created>
+      <option name="number" value="LOCAL−00021" />
+      <option name="presentableId" value="LOCAL−00021" />
+      <updated>1693322300186</updated>
+    </task>
+    <task id="LOCAL−00022" summary="Med splits">
+      <created>1693370077768</created>
+      <option name="number" value="LOCAL−00022" />
+      <option name="presentableId" value="LOCAL−00022" />
+      <updated>1693370077768</updated>
+    </task>
+    <task id="LOCAL−00023" summary="Med splits">
+      <created>1693399618411</created>
+      <option name="number" value="LOCAL−00023" />
+      <option name="presentableId" value="LOCAL−00023" />
+      <updated>1693399618411</updated>
+    </task>
+    <task id="LOCAL−00024" summary="Med splits">
+      <created>1693483756486</created>
+      <option name="number" value="LOCAL−00024" />
+      <option name="presentableId" value="LOCAL−00024" />
+      <updated>1693483756486</updated>
+    </task>
+    <task id="LOCAL−00025" summary="Med splits">
+      <created>1693552608874</created>
+      <option name="number" value="LOCAL−00025" />
+      <option name="presentableId" value="LOCAL−00025" />
+      <updated>1693552608874</updated>
+    </task>
+    <task id="LOCAL−00026" summary="Med splits">
+      <created>1693553605954</created>
+      <option name="number" value="LOCAL−00026" />
+      <option name="presentableId" value="LOCAL−00026" />
+      <updated>1693553605954</updated>
+    </task>
+    <task id="LOCAL−00027" summary="Med splits">
+      <created>1693593229864</created>
+      <option name="number" value="LOCAL−00027" />
+      <option name="presentableId" value="LOCAL−00027" />
+      <updated>1693593229864</updated>
+    </task>
+    <task id="LOCAL−00028" summary="Med splits">
+      <created>1693806357395</created>
+      <option name="number" value="LOCAL−00028" />
+      <option name="presentableId" value="LOCAL−00028" />
+      <updated>1693806357395</updated>
+    </task>
+    <task id="LOCAL−00029" summary="Med splits">
+      <created>1693819988709</created>
+      <option name="number" value="LOCAL−00029" />
+      <option name="presentableId" value="LOCAL−00029" />
+      <updated>1693819988709</updated>
+    </task>
+    <task id="LOCAL−00030" summary="Med splits">
+      <created>1693821717614</created>
+      <option name="number" value="LOCAL−00030" />
+      <option name="presentableId" value="LOCAL−00030" />
+      <updated>1693821717614</updated>
+    </task>
+    <task id="LOCAL−00031" summary="Med splits">
+      <created>1693844214400</created>
+      <option name="number" value="LOCAL−00031" />
+      <option name="presentableId" value="LOCAL−00031" />
+      <updated>1693844214400</updated>
+    </task>
+    <task id="LOCAL−00032" summary="Med splits">
+      <created>1694180392859</created>
+      <option name="number" value="LOCAL−00032" />
+      <option name="presentableId" value="LOCAL−00032" />
+      <updated>1694180392859</updated>
+    </task>
+    <task id="LOCAL−00033" summary="Med splits">
+      <created>1694288730840</created>
+      <option name="number" value="LOCAL−00033" />
+      <option name="presentableId" value="LOCAL−00033" />
+      <updated>1694288730840</updated>
+    </task>
+    <task id="LOCAL−00034" summary="Med splits">
+      <created>1694354576105</created>
+      <option name="number" value="LOCAL−00034" />
+      <option name="presentableId" value="LOCAL−00034" />
+      <updated>1694354576105</updated>
+    </task>
+    <task id="LOCAL−00035" summary="Med splits">
+      <created>1694356187806</created>
+      <option name="number" value="LOCAL−00035" />
+      <option name="presentableId" value="LOCAL−00035" />
+      <updated>1694356187806</updated>
+    </task>
+    <task id="LOCAL−00036" summary="Med splits">
+      <created>1694357068229</created>
+      <option name="number" value="LOCAL−00036" />
+      <option name="presentableId" value="LOCAL−00036" />
+      <updated>1694357068229</updated>
+    </task>
+    <task id="LOCAL−00037" summary="Med splits">
+      <created>1694357117518</created>
+      <option name="number" value="LOCAL−00037" />
+      <option name="presentableId" value="LOCAL−00037" />
+      <updated>1694357117518</updated>
+    </task>
+    <task id="LOCAL−00038" summary="Med splits">
+      <created>1694358982872</created>
+      <option name="number" value="LOCAL−00038" />
+      <option name="presentableId" value="LOCAL−00038" />
+      <updated>1694358982872</updated>
+    </task>
+    <task id="LOCAL−00039" summary="Med splits">
+      <created>1694359005382</created>
+      <option name="number" value="LOCAL−00039" />
+      <option name="presentableId" value="LOCAL−00039" />
+      <updated>1694359005382</updated>
+    </task>
+    <task id="LOCAL−00040" summary="Med splits">
+      <created>1694531382577</created>
+      <option name="number" value="LOCAL−00040" />
+      <option name="presentableId" value="LOCAL−00040" />
+      <updated>1694531382577</updated>
+    </task>
+    <task id="LOCAL−00041" summary="Med splits">
+      <created>1694708067877</created>
+      <option name="number" value="LOCAL−00041" />
+      <option name="presentableId" value="LOCAL−00041" />
+      <updated>1694708067877</updated>
+    </task>
+    <task id="LOCAL−00042" summary="Med splits">
+      <created>1694708104347</created>
+      <option name="number" value="LOCAL−00042" />
+      <option name="presentableId" value="LOCAL−00042" />
+      <updated>1694708104347</updated>
+    </task>
+    <task id="LOCAL−00043" summary="Med splits">
+      <created>1694708473390</created>
+      <option name="number" value="LOCAL−00043" />
+      <option name="presentableId" value="LOCAL−00043" />
+      <updated>1694708473390</updated>
+    </task>
+    <task id="LOCAL−00044" summary="Med splits">
+      <created>1694761899837</created>
+      <option name="number" value="LOCAL−00044" />
+      <option name="presentableId" value="LOCAL−00044" />
+      <updated>1694761899837</updated>
+    </task>
+    <task id="LOCAL−00045" summary="Spinner">
+      <created>1695051661527</created>
+      <option name="number" value="LOCAL−00045" />
+      <option name="presentableId" value="LOCAL−00045" />
+      <updated>1695051661527</updated>
+    </task>
+    <task id="LOCAL−00046" summary="Spinner">
+      <created>1695300252914</created>
+      <option name="number" value="LOCAL−00046" />
+      <option name="presentableId" value="LOCAL−00046" />
+      <updated>1695300252914</updated>
+    </task>
+    <task id="LOCAL−00047" summary="Spinner">
+      <created>1696344047230</created>
+      <option name="number" value="LOCAL−00047" />
+      <option name="presentableId" value="LOCAL−00047" />
+      <updated>1696344047230</updated>
+    </task>
+    <task id="LOCAL−00048" summary="Spinner">
+      <created>1696345119326</created>
+      <option name="number" value="LOCAL−00048" />
+      <option name="presentableId" value="LOCAL−00048" />
+      <updated>1696345119326</updated>
+    </task>
+    <task id="LOCAL−00049" summary="Spinner">
+      <created>1696573908761</created>
+      <option name="number" value="LOCAL−00049" />
+      <option name="presentableId" value="LOCAL−00049" />
+      <updated>1696573908761</updated>
+    </task>
+    <task id="LOCAL−00050" summary="MyLiveO">
+      <created>1708515847567</created>
+      <option name="number" value="LOCAL−00050" />
+      <option name="presentableId" value="LOCAL−00050" />
+      <updated>1708515847567</updated>
+    </task>
+    <task id="LOCAL−00051" summary="MyLiveO">
+      <created>1708516399689</created>
+      <option name="number" value="LOCAL−00051" />
+      <option name="presentableId" value="LOCAL−00051" />
+      <updated>1708516399689</updated>
+    </task>
+    <task id="LOCAL−00052" summary="MyLiveO2">
+      <created>1708516742040</created>
+      <option name="number" value="LOCAL−00052" />
+      <option name="presentableId" value="LOCAL−00052" />
+      <updated>1708516742040</updated>
+    </task>
+    <task id="LOCAL−00053" summary="MyLiveO2">
+      <created>1708516926167</created>
+      <option name="number" value="LOCAL−00053" />
+      <option name="presentableId" value="LOCAL−00053" />
+      <updated>1708516926167</updated>
+    </task>
+    <task id="LOCAL−00054" summary="MyLiveO2">
+      <created>1708516978738</created>
+      <option name="number" value="LOCAL−00054" />
+      <option name="presentableId" value="LOCAL−00054" />
+      <updated>1708516978738</updated>
+    </task>
+    <task id="LOCAL−00055" summary="MyLiveO">
+      <created>1708517282943</created>
+      <option name="number" value="LOCAL−00055" />
+      <option name="presentableId" value="LOCAL−00055" />
+      <updated>1708517282943</updated>
+    </task>
+    <task id="LOCAL−00056" summary=".gitignore">
+      <created>1708682281030</created>
+      <option name="number" value="LOCAL−00056" />
+      <option name="presentableId" value="LOCAL−00056" />
+      <updated>1708682281031</updated>
+    </task>
+    <task id="LOCAL−00057" summary=".gitignore">
+      <created>1708682754418</created>
+      <option name="number" value="LOCAL−00057" />
+      <option name="presentableId" value="LOCAL−00057" />
+      <updated>1708682754418</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="a" />
+    <MESSAGE value="Classes" />
+    <MESSAGE value="Med splits" />
+    <MESSAGE value="Spinner" />
+    <MESSAGE value="MyLiveO2" />
+    <MESSAGE value="MyLiveO" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

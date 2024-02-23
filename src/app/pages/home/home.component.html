@@ -1,74 +1,156 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
-  <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
+  Event filter:
+  <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px;font-size: smaller">
+    <tds-link ><a (click)="selectFilterComp(s)" href="#">{{s}}</a></tds-link>
+  </span>
+  <span style="display:inline-block;margin-left: 10px">
+    <tds-link><a (click)="backComp()" href="#"><<</a></tds-link>
+  </span>
+  <br/>
+  Runner/Club:
+  <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px;font-size: smaller">
+    <tds-link ><a (click)="selectFilterUser(u)" href="#">{{u}}</a></tds-link>
+  </span>
+  <span style="display:inline-block;margin-left: 10px">
+    <tds-link><a (click)="backUser()" href="#"><<</a></tds-link>
+  </span>
+  <br/>
 
- <div style="display:inline-block">
-    <input  [(ngModel)]="txtSearch"
-            type="text"
-            name="txtSearch"
-            autofocus
-            required
-            (ngModelChange)="doFilter()"
-            placeholder="Filter"
-            [ngModelOptions]="{standalone: true}">
-  </div>
-
-  <button type="button" (click)="submitForm()">>></button>
-
-  <p *ngFor="let s of searchList" style="display:inline-block;margin-left: 20px">
-    <tds-link ><a (click)="selectFilter(s)" href="#">{{s}}</a></tds-link>
-  </p>
-  <div  style="display:inline-block;float: right">
-    <button (click)="clearForm()">
-      Clear
-    </button>
-  </div>
-  </tds-block>
-<tds-block class="tds-container">
-
-    <div class="tds-row">
-      <div class="tds-col-max">
-        <span ><b>Competitions</b></span>
-        <div class="inside-demo">
-          <dl>
-            <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
-              {{c.date}}  <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
-            </dt>
-          </dl>
-
-        </div>
-      </div>
-      <div class="tds-col-max " >
-
-        <tds-inline-tabs default-selected-index="0" #tabs>
+  <div style="display: inline-block">{{competitionInfo.name}}</div>
+    <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
+        <tds-inline-tabs default-selected-index="1" #tabs>
           <tds-inline-tab>
-            <button>Info</button>
+            <button id="tab0">Live</button>
           </tds-inline-tab>
           <tds-inline-tab>
-            <button>Second tab</button>
+            <button id="tab1">Event</button>
           </tds-inline-tab>
           <tds-inline-tab>
-            <button>Third tab</button>
+            <button id="tab2">Info</button>
           </tds-inline-tab>
         </tds-inline-tabs>
         <div class="tabs-panel">
           <span [hidden]="0 !== selectedIndex">
-            {{competitionInfo.id}}<br>
-            {{competitionInfo.name}}<br>
-            {{competitionInfo.date}}<br>
-            {{competitionInfo.organizer}}<br>
+          <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
+              <div style="display:inline-block">
+                <input  [(ngModel)]="txtUser"
+                        type="text"
+                        name="txtUser"
+                        autofocus
+                        required
+                        placeholder="Add filter.."
+                        (ngModelChange)="clearUser()"
+                        [ngModelOptions]="{standalone: true}">
+              </div>
+              <button type="button" (click)="submitFormUser()">Filter</button>
+              <button type="button" (click)="allUser()">All</button>
+             <tds-link style="margin-left: 10px">
+               <a href="#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
+             </tds-link>
+
+              <div *ngFor="let cl of classesObj.classes">
+              <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
+                <tds-table-header>
+                  <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
+                  <tds-header-cell column-key="name" column-title="Name"></tds-header-cell>
+                  <tds-header-cell column-key="split" column-title="#"></tds-header-cell>
+                  <tds-header-cell column-key="result" column-title="Splits"></tds-header-cell>
+                  <tds-header-cell column-key="progress" column-title="Progress"></tds-header-cell>
+                </tds-table-header>
+                <tds-table-body >
+                  <tds-table-body-row *ngFor="let r of cl?._resultsObj?._filteredResults">
+                    <tds-body-cell disable-padding="false">
+                      <tds-link>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
+                        <br>{{toTimeString(r.start)}}
+                      </tds-link>
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
+                    {{r.name}}<br>{{printClub(r.club,cl.className)}}<br>
+                      <b>{{findLegResult(r,cl.className)}}</b>
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
+                      <span *ngFor="let sc of cl._resultsObj.splitcontrols">
+                      {{r.splits[sc.code+'_place']}}<br>
+                      </span>
+                      <b>{{r.place}}</b>
+                    </tds-body-cell>
+                    <tds-body-cell disable-padding="false" >
+                       <span *ngFor="let sc of cl._resultsObj.splitcontrols">
+                         {{toTimeString(r.splits[sc.code])}}<br>
+                      </span>
+                      <b>{{toTimeString(r.result)}}</b><br><span style="font-size: smaller">+{{toTimeString(r.timeplus)}}</span>
+                    </tds-body-cell>
+
+                    <tds-body-cell disable-padding="false">
+                      {{r.progress}}
+                    </tds-body-cell>
+
+                  </tds-table-body-row>
+                </tds-table-body>
+              </tds-table>
+              </div>
           </span>
           <span [hidden]="1 !== selectedIndex">
+        <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
+            <div style="display:inline-block">
+              <input  [(ngModel)]="txtComp"
+                      type="text"
+                      name="txtSearch"
+                      autofocus
+                      required
+                      (ngModelChange)="doFilterComp()"
+                      placeholder="Filter"
+                      [ngModelOptions]="{standalone: true}">
+            </div>
 
-            Content for 2nd tab
+            <button type="button" (click)="submitFormComp()">Filter</button>
+            <button type="button" (click)="includeOldComp()">Old</button>
+
+            <div>
+            Today:
+              <span *ngFor="let c of filterToday(competitions)" style="display:inline-block;margin-left: 10px">
+                <tds-link>
+                <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
+                </tds-link>
+              </span>
+            </div>
+
+            <div >
+              <dl>
+                <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
+                  {{c.date}}  <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
+                </dt>
+              </dl>
+
+            </div>
+
 
           </span>
-          <span [hidden]="2 !== selectedIndex"> Content for 3rd tab </span>
+          <span [hidden]="2 !== selectedIndex">
+            <p>
+              {{competitionInfo.id}}
+              {{competitionInfo.name}}
+              {{competitionInfo.date}}
+              {{competitionInfo.organizer}}
+            </p>
+            <tds-table vertical-dividers="true" compact-design="true" responsive="true" no-min-width>
+              <tds-table-header>
+                <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
+              </tds-table-header>
+              <tds-table-body>
+                <tds-table-body-row *ngFor="let cl of classesObj.classes">
+
+                  <tds-body-cell disable-padding="false">
+                    <tds-link>
+                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
+                    </tds-link>
+                  </tds-body-cell>
+                </tds-table-body-row>
+              </tds-table-body>
+            </tds-table>
+          </span>
         </div>
-
-      </div>
-
-
-    </div>
 </tds-block>
 
 
