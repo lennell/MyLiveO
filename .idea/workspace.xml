@@ -187,12 +187,7 @@
       <workItem from="1708517779618" duration="166000" />
       <workItem from="1708622052240" duration="11000" />
       <workItem from="1708682026935" duration="265000" />
-    </task>
-    <task id="LOCAL−00008" summary="a">
-      <created>1692768814671</created>
-      <option name="number" value="LOCAL−00008" />
-      <option name="presentableId" value="LOCAL−00008" />
-      <updated>1692768814672</updated>
+      <workItem from="1708682664821" duration="99000" />
     </task>
     <task id="LOCAL−00009" summary="Classes">
       <created>1692854636505</created>
@@ -482,7 +477,13 @@
       <option name="presentableId" value="LOCAL−00056" />
       <updated>1708682281031</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL−00057" summary=".gitignore">
+      <created>1708682754418</created>
+      <option name="number" value="LOCAL−00057" />
+      <option name="presentableId" value="LOCAL−00057" />
+      <updated>1708682754418</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
