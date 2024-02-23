@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,13 +186,7 @@
       <workItem from="1708515633976" duration="1636000" />
       <workItem from="1708517779618" duration="166000" />
       <workItem from="1708622052240" duration="11000" />
-      <workItem from="1708682026935" duration="235000" />
-    </task>
-    <task id="LOCAL−00007" summary="a">
-      <created>1692706521208</created>
-      <option name="number" value="LOCAL−00007" />
-      <option name="presentableId" value="LOCAL−00007" />
-      <updated>1692706521208</updated>
+      <workItem from="1708682026935" duration="265000" />
     </task>
     <task id="LOCAL−00008" summary="a">
       <created>1692768814671</created>
@@ -485,7 +476,13 @@
       <option name="presentableId" value="LOCAL−00055" />
       <updated>1708517282943</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL−00056" summary=".gitignore">
+      <created>1708682281030</created>
+      <option name="number" value="LOCAL−00056" />
+      <option name="presentableId" value="LOCAL−00056" />
+      <updated>1708682281031</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +506,8 @@
     <MESSAGE value="Spinner" />
     <MESSAGE value="MyLiveO2" />
     <MESSAGE value="MyLiveO" />
-    <option name="LAST_COMMIT_MESSAGE" value="MyLiveO" />
+    <MESSAGE value=".gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
