@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -208,13 +203,7 @@
       <workItem from="1711013122479" duration="614000" />
       <workItem from="1711047796328" duration="1651000" />
       <workItem from="1711097564628" duration="672000" />
-      <workItem from="1711125088910" duration="662000" />
-    </task>
-    <task id="LOCAL−00011" summary="Classes">
-      <created>1692888850155</created>
-      <option name="number" value="LOCAL−00011" />
-      <option name="presentableId" value="LOCAL−00011" />
-      <updated>1692888850155</updated>
+      <workItem from="1711125088910" duration="1000000" />
     </task>
     <task id="LOCAL−00012" summary="Classes">
       <created>1693150466049</created>
@@ -504,7 +493,13 @@
       <option name="presentableId" value="LOCAL−00059" />
       <updated>1708684186610</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL−00060" summary="new comp">
+      <created>1711125960527</created>
+      <option name="number" value="LOCAL−00060" />
+      <option name="presentableId" value="LOCAL−00060" />
+      <updated>1711125960527</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -529,7 +524,8 @@
     <MESSAGE value="MyLiveO2" />
     <MESSAGE value="MyLiveO" />
     <MESSAGE value=".gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+    <MESSAGE value="new comp" />
+    <option name="LAST_COMMIT_MESSAGE" value="new comp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
