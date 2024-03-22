@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +56,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.karma.karma_node_package_dir&quot;: &quot;C:/javadev/github/tegel/lennell.github.io/node_modules/@angular/cli&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/javadev/github/tegel/lennell.github.io/.gitignore&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sssckr/Desktop/agda/ggd5747-ForecastforecastExcpHandliFromOas/outver2/AGDA_00000001_20240322071257695_00000148.SCCO4119&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
@@ -66,7 +69,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Karma.competition.spec.ts">
+  <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="competition.spec.ts" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="" />
       <karma-package-dir value="" />
@@ -99,7 +102,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7e1be24a-85f3-45a3-b7ae-5a8e11e05ac2" name="Changes" comment="" />
+      <changelist id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="" />
       <created>1692704519066</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -192,12 +195,20 @@
       <workItem from="1708682026935" duration="265000" />
       <workItem from="1708682664821" duration="99000" />
       <workItem from="1708683052460" duration="78000" />
-    </task>
-    <task id="LOCAL−00010" summary="Classes">
-      <created>1692856343129</created>
-      <option name="number" value="LOCAL−00010" />
-      <option name="presentableId" value="LOCAL−00010" />
-      <updated>1692856343129</updated>
+      <workItem from="1708684124905" duration="135000" />
+      <workItem from="1710742703612" duration="206000" />
+      <workItem from="1710760240962" duration="2003000" />
+      <workItem from="1710764893027" duration="310000" />
+      <workItem from="1710865535023" duration="5000" />
+      <workItem from="1710865577213" duration="373000" />
+      <workItem from="1710926018503" duration="14000" />
+      <workItem from="1710927274996" duration="15000" />
+      <workItem from="1710928504681" duration="628000" />
+      <workItem from="1711008402964" duration="1392000" />
+      <workItem from="1711013122479" duration="614000" />
+      <workItem from="1711047796328" duration="1651000" />
+      <workItem from="1711097564628" duration="672000" />
+      <workItem from="1711125088910" duration="662000" />
     </task>
     <task id="LOCAL−00011" summary="Classes">
       <created>1692888850155</created>
@@ -487,7 +498,13 @@
       <option name="presentableId" value="LOCAL−00058" />
       <updated>1708683114021</updated>
     </task>
-    <option name="localTasksCounter" value="59" />
+    <task id="LOCAL−00059" summary=".gitignore">
+      <created>1708684186610</created>
+      <option name="number" value="LOCAL−00059" />
+      <option name="presentableId" value="LOCAL−00059" />
+      <updated>1708684186610</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

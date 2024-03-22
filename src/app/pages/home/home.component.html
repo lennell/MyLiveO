@@ -49,6 +49,7 @@
              </tds-link>
 
               <div *ngFor="let cl of classesObj.classes">
+
               <tds-table *ngIf="cl?._resultsObj?._filteredResults?.length" vertical-dividers="false" compact-design="true" responsive="false" no-min-width>
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
@@ -128,6 +129,15 @@
 
           </span>
           <span [hidden]="2 !== selectedIndex">
+                         <input  [(ngModel)]="newId"
+                                 type="text"
+                                 name="txtSearch"
+                                 autofocus
+                                 required
+                                 placeholder="New Competition"
+                                 [ngModelOptions]="{standalone: true}">
+            <button type="button" (click)="submitFormNewId()">New Competition</button>
+
             <p>
               {{competitionInfo.id}}
               {{competitionInfo.name}}

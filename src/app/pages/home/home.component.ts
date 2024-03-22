@@ -20,6 +20,7 @@ export class HomeComponent {
   public compList: string[] = [];
   public txtComp:string = '';
   public userList: string[] = [];
+  public newId:number;
   public txtUser:string = ''
   public competitionsOrig: Competition[] = [];
   public competitions: Competition[] = [];
@@ -58,8 +59,9 @@ export class HomeComponent {
       this.userList.push( 'Strängnäs');
     }
     this.txtUser = this.userList[0];
-
+    console.log('xxx0')
     this.service.getCompetitions().subscribe( (response:object) => {
+      console.log('xxx1')
       // @ts-ignore
       response.competitions.forEach( c => {
         const firstDayOfYear = new Date(new Date().getFullYear(), 0, 1);
@@ -71,11 +73,12 @@ export class HomeComponent {
 
     });
 
-    if (localStorage.getItem('compId')){
+/*    if (localStorage.getItem('compId')){
       // @ts-ignore
-      let id:number = parseInt(localStorage.getItem('compId'));
+      //let id:number = parseInt(localStorage.getItem('compId'));
       this.clickCompetition(id);
-    }
+    }*/
+    this.clickCompetition(29150);
 
   }
 
@@ -153,6 +156,12 @@ export class HomeComponent {
     this.userList.push(this.txtUser);
     localStorage.setItem('userList',this.userList.toString())
     this.getUserFilterResult(this.competitionInfo.id);
+  }
+
+  submitFormNewId() {
+    console.log(this.newId);
+    this.clickCompetition(this.newId)
+
   }
 
   doReload() {
