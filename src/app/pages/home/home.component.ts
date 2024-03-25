@@ -73,12 +73,11 @@ export class HomeComponent {
 
     });
 
-/*    if (localStorage.getItem('compId')){
+    if (localStorage.getItem('compId')){
       // @ts-ignore
-      //let id:number = parseInt(localStorage.getItem('compId'));
+      let id:number = parseInt(localStorage.getItem('compId'));
       this.clickCompetition(id);
-    }*/
-    this.clickCompetition(29150);
+    }
 
   }
 
