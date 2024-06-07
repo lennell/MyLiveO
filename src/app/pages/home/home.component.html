@@ -120,7 +120,7 @@
                 state="default"
                 autofocus
                 required
-                placeholder="Filter"
+                placeholder="Filter.."
                 (ngModelChange)="doFilterComp()"
                 label-position="inside"
                 no-min-width
@@ -128,14 +128,14 @@
               ></tds-text-field>
              </div>
 
-              <input  [(ngModel)]="txtComp"
+            <!--  <input  [(ngModel)]="txtComp"
                       type="text"
                       name="txtSearch"
                       autofocus
                       required
                       (ngModelChange)="doFilterComp()"
                       placeholder="Filter"
-                      [ngModelOptions]="{standalone: true}">
+                      [ngModelOptions]="{standalone: true}">-->
             </div>
 
             <button type="button" (click)="submitFormComp()">Filter</button>
