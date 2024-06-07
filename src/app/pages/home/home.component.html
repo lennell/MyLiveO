@@ -32,7 +32,23 @@
         <div class="tabs-panel">
           <span [hidden]="0 !== selectedIndex">
           <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
-              <div style="display:inline-block">
+             <div style="display:inline-block">
+              <tds-text-field
+                [(ngModel)]="txtUser"
+                type="Text"
+                size="sm"
+                state="default"
+                autofocus
+                required
+                placeholder="Add filter.."
+                (ngModelChange)="clearUser()"
+                label-position="inside"
+                no-min-width
+                ngDefaultControl
+              ></tds-text-field>
+             </div>
+
+            <!--  <div style="display:inline-block">
                 <input  [(ngModel)]="txtUser"
                         type="text"
                         name="txtUser"
@@ -41,7 +57,7 @@
                         placeholder="Add filter.."
                         (ngModelChange)="clearUser()"
                         [ngModelOptions]="{standalone: true}">
-              </div>
+              </div>-->
               <button type="button" (click)="submitFormUser()">Filter</button>
               <button type="button" (click)="allUser()">All</button>
              <tds-link style="margin-left: 10px">
@@ -95,6 +111,23 @@
           <span [hidden]="1 !== selectedIndex">
         <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
             <div style="display:inline-block">
+
+               <div style="display:inline-block">
+              <tds-text-field
+                [(ngModel)]="txtComp"
+                type="Text"
+                size="sm"
+                state="default"
+                autofocus
+                required
+                placeholder="Filter"
+                (ngModelChange)="doFilterComp()"
+                label-position="inside"
+                no-min-width
+                ngDefaultControl
+              ></tds-text-field>
+             </div>
+
               <input  [(ngModel)]="txtComp"
                       type="text"
                       name="txtSearch"
