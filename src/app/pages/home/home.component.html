@@ -17,6 +17,7 @@
   <br/>
 
   <div style="display: inline-block">{{competitionInfo.name}}</div>
+
     <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
         <tds-inline-tabs default-selected-index="1" #tabs>
           <tds-inline-tab>
@@ -58,8 +59,10 @@
                         (ngModelChange)="clearUser()"
                         [ngModelOptions]="{standalone: true}">
               </div>-->
-              <button type="button" (click)="submitFormUser()">Filter</button>
-              <button type="button" (click)="allUser()">All</button>
+             <!-- <button type="button" (click)="submitFormUser()">Filter</button>-->
+            <tds-button size="xs" text="Filter" (click)="submitFormUser()"></tds-button>
+             <tds-button size="xs" text="All" (click)="allUser()"></tds-button>
+
              <tds-link style="margin-left: 10px">
                <a href="#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
              </tds-link>
@@ -137,9 +140,8 @@
                       placeholder="Filter"
                       [ngModelOptions]="{standalone: true}">-->
             </div>
-
-            <button type="button" (click)="submitFormComp()">Filter</button>
-            <button type="button" (click)="includeOldComp()">Old</button>
+            <tds-button size="xs" text="Filter" (click)="submitFormComp()"></tds-button>
+             <tds-button size="xs" text="Old" (click)="includeOldComp()"></tds-button>
 
             <div>
             Today:
@@ -162,14 +164,6 @@
 
           </span>
           <span [hidden]="2 !== selectedIndex">
-                         <input  [(ngModel)]="newId"
-                                 type="text"
-                                 name="txtSearch"
-                                 autofocus
-                                 required
-                                 placeholder="New Competition"
-                                 [ngModelOptions]="{standalone: true}">
-            <button type="button" (click)="submitFormNewId()">New Competition</button>
 
             <p>
               {{competitionInfo.id}}
