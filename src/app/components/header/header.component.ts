@@ -9,7 +9,7 @@ import {Competition} from "../../models/competition";
 })
 export class HeaderComponent {
 
-
+  mobileNavOpen = false;
   constructor(private router: Router) {}
 
   isActive(url: string): boolean {
@@ -19,4 +19,7 @@ export class HeaderComponent {
     return this.router.url;
   }
 
+  toggleMobileSideMenu() {
+    this.mobileNavOpen = !this.mobileNavOpen;
+  }
 }
