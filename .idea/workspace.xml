@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="cli">
+    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="Build upgrade_tegel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +240,17 @@
       <workItem from="1718120363018" duration="38000" />
       <workItem from="1718173559651" duration="366000" />
       <workItem from="1718289433993" duration="3650000" />
-      <workItem from="1718703240002" duration="316000" />
+      <workItem from="1718703240002" duration="950000" />
+      <workItem from="1718704246127" duration="1473000" />
+      <workItem from="1718709337734" duration="29000" />
+      <workItem from="1719412260595" duration="1934000" />
+      <workItem from="1719477718698" duration="1024000" />
+      <workItem from="1719479575331" duration="2520000" />
+      <workItem from="1719483798979" duration="1520000" />
+      <workItem from="1719505839564" duration="737000" />
+      <workItem from="1719820165553" duration="767000" />
+      <workItem from="1719841324336" duration="2397000" />
+      <workItem from="1719902043189" duration="342000" />
     </task>
     <task id="LOCAL−00017" summary="Classes">
       <created>1693296063591</created>
@@ -534,7 +546,7 @@
       <option name="presentableId" value="LOCAL−00065" />
       <updated>1717743279423</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -561,7 +573,8 @@
     <MESSAGE value=".gitignore" />
     <MESSAGE value="new comp" />
     <MESSAGE value="cli" />
-    <option name="LAST_COMMIT_MESSAGE" value="cli" />
+    <MESSAGE value="Build upgrade_tegel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Build upgrade_tegel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,40 @@
 <ng-container>
-<p>page1 works!</p>
+
+  <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
+    <div class="tds-headline-04">Calculate Lap Times</div>
 
 
+    <div style="display:inline-block">
+      <div style="display:inline-block">
+      <tds-text-field
+        [(ngModel)]="txtTargetTime"
+        type="Text"
+        size="sm"
+        state="default"
+        autofocus
+        required
+        placeholder="Target Time"
+        label-position="inside"
+        no-min-width
+        ngDefaultControl
+      ></tds-text-field>
+      </div>
+      <div style="display:inline-block">
+      <tds-text-field
+        [(ngModel)]="txtTargetTime"
+        type="Text"
+        size="sm"
+        state="default"
+        autofocus
+        required
+        placeholder="Distance"
+        label-position="inside"
+        no-min-width
+        ngDefaultControl
+      ></tds-text-field>
+      </div>
+      <tds-button size="xs" text="Filter" (click)="doClick()"></tds-button>
+    </div>
 
+</tds-block>
 </ng-container>

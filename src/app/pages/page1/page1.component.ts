@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component {
+  txtTargetTime: any;
 
   doClick() {
     console.log('hej')

@@ -9,7 +9,7 @@
   ></tds-header-hamburger>
 
   <tds-header-title>
-    <tds-link><a style="color: white" routerLink="/">My Running</a>
+    <tds-link><a style="color: white" routerLink="/">My Sports</a>
     </tds-link>
   </tds-header-title>
 
@@ -20,7 +20,6 @@
       aria-label="Side menu"
       persistent
       open="{{ mobileNavOpen }}"
-
     >
       <tds-side-menu-overlay
         (click)="toggleMobileSideMenu()"
@@ -37,7 +36,7 @@
           routerLink="/"
           (click)="toggleMobileSideMenu()"
         >
-          O Events
+          Live O Events
         </a>
       </tds-side-menu-item>
 
@@ -46,7 +45,7 @@
           routerLink="/page1"
           (click)="toggleMobileSideMenu()"
         >
-          Running
+          Lap calculator
         </a>
       </tds-side-menu-item>
 
