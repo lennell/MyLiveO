@@ -5,36 +5,49 @@
 
 
     <div style="display:inline-block">
-      <div style="display:inline-block">
+      <div class="tds-input">
       <tds-text-field
-        [(ngModel)]="txtTargetTime"
+        [(ngModel)]="txtDistance"
         type="Text"
         size="sm"
         state="default"
         autofocus
         required
-        placeholder="Target Time"
-        label-position="inside"
+        placeholder="Meters"
         no-min-width
-        ngDefaultControl
       ></tds-text-field>
       </div>
-      <div style="display:inline-block">
+      <div class="tds-input">
+        <tds-dropdown [(ngModel)]="drpLapDistance"
+          size="sm" default-value="400" required>
+          <tds-dropdown-option value="200">200 m</tds-dropdown-option>
+          <tds-dropdown-option value="400">400 m</tds-dropdown-option>
+        </tds-dropdown>
+
+      </div>
+      <div class="tds-input">
       <tds-text-field
         [(ngModel)]="txtTargetTime"
         type="Text"
         size="sm"
         state="default"
-        autofocus
         required
-        placeholder="Distance"
-        label-position="inside"
+        placeholder="mm:ss"
         no-min-width
-        ngDefaultControl
       ></tds-text-field>
       </div>
-      <tds-button size="xs" text="Filter" (click)="doClick()"></tds-button>
+      <div style="display:inline-block">
+        <tds-button size="xs" text="Filter" (click)="doClick()"></tds-button>
+      </div>
     </div>
+
+    <tds-table vertical-dividers="false" compact-design="true" responsive="false">
+      <tds-table-header>
+        <tds-header-cell column-key="lap" column-title="Lap"></tds-header-cell>
+        <tds-header-cell column-key="time" column-title="Time"></tds-header-cell>
+      </tds-table-header>
+
+    </tds-table>
 
 </tds-block>
 </ng-container>

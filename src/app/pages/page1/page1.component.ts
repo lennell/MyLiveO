@@ -6,7 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component {
-  txtTargetTime: any;
+  txtTargetTime: string;
+  txtDistance: number;
+  drpLapDistance: number;
 
   doClick() {
     console.log('hej')
