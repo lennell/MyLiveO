@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
-import {Competition} from "../../models/competition";
 
 @Component({
   selector: 'app-header',
@@ -20,9 +19,7 @@ export class HeaderComponent {
   }
 
   toggleMobileSideMenu() {
-    console.log('a ' + this.mobileNavOpen);
     this.mobileNavOpen = !this.mobileNavOpen;
-    console.log('b ' + this.mobileNavOpen);
 
   }
 }
