@@ -16,41 +16,21 @@
 </tds-header>
 
   <div class="side-menu-and-main" >
-    <tds-side-menu
-      aria-label="Side menu"
-      persistent
-      open="{{ mobileNavOpen }}"
-    >
-      <tds-side-menu-overlay
-        (click)="toggleMobileSideMenu()"
-        slot="overlay"
-      ></tds-side-menu-overlay>
+    <tds-side-menu aria-label="Side menu" persistent open="{{ mobileNavOpen }}" >
+      <tds-side-menu-overlay (click)="toggleMobileSideMenu()"  slot="overlay" ></tds-side-menu-overlay>
+      <tds-side-menu-close-button slot="close-button" (click)="toggleMobileSideMenu()" ></tds-side-menu-close-button>
 
-      <tds-side-menu-close-button
-        slot="close-button"
-        (click)="toggleMobileSideMenu()"
-      ></tds-side-menu-close-button>
-
-      <tds-side-menu-item [attr.selected]="isActive('/')">
-        <a
-          routerLink="/"
-          (click)="toggleMobileSideMenu()"
-        >
+      <tds-side-menu-item [selected]="isActive('/')">
+        <a routerLink="/" (click)="toggleMobileSideMenu()">
           Live O Events
         </a>
       </tds-side-menu-item>
 
-      <tds-side-menu-item [attr.selected]="isActive('/page1')">
-        <a
-          routerLink="/page1"
-          (click)="toggleMobileSideMenu()"
-        >
+      <tds-side-menu-item [selected]="isActive('/page1')">
+        <a routerLink="/page1" (click)="toggleMobileSideMenu()">
           Lap calculator
         </a>
       </tds-side-menu-item>
-
     </tds-side-menu>
-
   </div>
-
 </ng-container>

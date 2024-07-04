@@ -13,13 +13,16 @@ export class HeaderComponent {
   constructor(private router: Router) {}
 
   isActive(url: string): boolean {
-    return this.router.isActive(url, true);
+    return this.router.url === url;
   }
   getCurrentUrl(): string {
     return this.router.url;
   }
 
   toggleMobileSideMenu() {
+    console.log('a ' + this.mobileNavOpen);
     this.mobileNavOpen = !this.mobileNavOpen;
+    console.log('b ' + this.mobileNavOpen);
+
   }
 }

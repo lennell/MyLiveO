@@ -45,7 +45,7 @@ export class HomeComponent {
     console.log('init')
 
     if (!localStorage.getItem('compList')){
-      localStorage.setItem('compList','DM,U10');
+      localStorage.setItem('compList','DM');
     }
     // @ts-ignore
     this.compList = localStorage.getItem('compList')?.split(',');
@@ -98,17 +98,8 @@ export class HomeComponent {
 
   }
 
-  ngAfterViewInit() {
-    if (this.tabsRef) {
-      const tabs = this.tabsRef.nativeElement;
-      tabs.addEventListener('tdsChange', (event: any) => {
-        const selectedTabIndex = event.detail.selectedTabIndex;
-        this.selectedIndex = selectedTabIndex;
-        console.log(this.selectedIndex);
-      });
-
-
-    }
+  onInlineTabChange(event: any): void {
+    this.selectedIndex = event.detail.selectedTabIndex;
   }
 
   submitFormComp() {

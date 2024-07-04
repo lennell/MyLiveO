@@ -6,11 +6,97 @@
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="Build upgrade_tegel">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/105.ecb5b54a84bfd0da.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1102.f3efd4a9469c1712.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1218.f343d4e89229aad8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1490.5f715bcd7c3b67ac.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1522.36b47b4d8dfc6f5f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1707.ebae19461f32c885.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1792.138de49113de59d7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1837.a129eafd03b94fe0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1853.0e9cfbad616291a2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/1960.a73b11580430758d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2249.afdd8380d4a3f0fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2292.3c62a4acd3073651.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2509.b62dca497262413f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2515.cfdf4381bc5ee03e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2814.a80fd54839a639c5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/2861.898cdd0eaef978ec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3168.1e4f8c11800085b1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3274.ead09e3078b75188.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3296.a27f79379b74d8aa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3300.0d4a055caa56a367.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3381.6a8b171de163a7ec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/350.97b19bb442298f14.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3523.ea7fc512fe48316c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3553.0e75df288ea7cebd.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3650.7e456253d8a4764c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/370.3c44e1898e7d96c6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3746.e155ddbb4cec4345.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/379.3c2c648b5fee02fb.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/3rdpartylicenses.txt" beforeDir="false" afterPath="$PROJECT_DIR$/docs/3rdpartylicenses.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/402.4c3fbb46758009e3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4036.6eed60cc5bafaeb5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4133.3b27b69b1fce85e7.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4401.b10680c939065e01.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4490.fee8a0fbe3d9b21f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4526.43225ac703c731af.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4563.c1d501030f13bdc8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4605.086a9e329be57025.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4695.58bede122bea28c3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4730.0cc9e1bc146d918f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/4976.1193f33adb74b2e0.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5088.bdc51e59599851d9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5100.fa5624106fb60794.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5134.2e7fda75249deb83.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5154.06d58e9dcc9d2573.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5332.dfd6a64aaaf588ee.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5359.2daf923704338316.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5473.26c45e7413d562cf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5518.4dff4cb797b4cf3c.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5593.86733015a8426612.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/5763.b8dd3d44a79c3dd5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/6014.fac9f718e54173f2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/620.82232773f7752082.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/6764.0687d80d5c6ad8a6.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/6938.4c5af58abd253881.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/6952.c3b77fd27570e842.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7023.3b232ce57f9f0225.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/73.51dc8de77733022b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7368.bd89e75b758c1d4a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7371.6a8cf55cc75543c3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7457.b73f3e7e96230c0b.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7486.254c310c9f402175.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/787.f2a5914e3f51ca21.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/7985.87bb4fe621ad8704.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8102.483a07cb7f44e747.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/813.62ad62345bb6d538.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8337.31254a0b02c30874.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8467.97cb5631831c98ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8587.217b53e68e36ce72.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8850.1fff3948d7755ebe.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/8909.584a0a45a8d918a8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9415.af63d0cec247dd8a.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9505.4480945d15c00e05.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9549.2047500f49e7c547.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9559.3ffb07e3bc347375.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9599.03b256e74e437d9e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9678.6624047332ce5d46.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9783.c418f683eb03278e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/9813.7086198fe18951f8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.3b5d636b2ce6d984.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/runtime.0a0b786d6a094259.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/styles.838c9d5e2fa869c3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/classes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/classes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,31 +142,31 @@
     <option name="showLibraryContents" value="true" />
     <option name="showModules" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "JavaScript Debug.Angular Application.executor": "Run",
-    "Karma.app.component.spec.ts.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "javascript.karma.karma_node_package_dir": "C:/javadev/github/tegel/lennell.github.io/node_modules/@angular/cli",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sssckr/Desktop/agda/ggd5747-ForecastforecastExcpHandliFromOas/outver2/AGDA_00000001_20240322071257695_00000148.SCCO4119",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.Angular CLI Server.executor": "Run",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "ts.external.directory.path": "C:\\javadev\\github\\tegel\\lennell.github.io\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;JavaScript Debug.Angular Application.executor&quot;: &quot;Run&quot;,
+    &quot;Karma.app.component.spec.ts.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.karma.karma_node_package_dir&quot;: &quot;C:/javadev/github/tegel/lennell.github.io/node_modules/@angular/cli&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sssckr/Desktop/agda/ggd5747-ForecastforecastExcpHandliFromOas/outver2/AGDA_00000001_20240322071257695_00000148.SCCO4119&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\javadev\\github\\tegel\\lennell.github.io\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="app.component.spec.ts" type="JavaScriptTestRunnerKarma" temporary="true" nameIsGenerated="true">
       <config-file value="" />
@@ -115,6 +201,12 @@
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.Angular Application" />
+      <item itemvalue="Karma.app.component.spec.ts" />
+      <item itemvalue="Karma.competition.spec.ts" />
+      <item itemvalue="npm.Angular CLI Server" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Karma.app.component.spec.ts" />
@@ -271,6 +363,10 @@
       <workItem from="1719902043189" duration="342000" />
       <workItem from="1719908270140" duration="2348000" />
       <workItem from="1719914704860" duration="4121000" />
+      <workItem from="1719993116937" duration="8513000" />
+      <workItem from="1720011796847" duration="6527000" />
+      <workItem from="1720069776296" duration="1561000" />
+      <workItem from="1720073064037" duration="3253000" />
     </task>
     <task id="LOCAL−00017" summary="Classes">
       <created>1693296063591</created>

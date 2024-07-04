@@ -19,14 +19,14 @@
   <div style="display: inline-block">{{competitionInfo.name}}</div>
 
     <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
-        <tds-inline-tabs default-selected-index="1" #tabs>
-          <tds-inline-tab>
+        <tds-inline-tabs (tdsChange)="onInlineTabChange($event)" default-selected-index="1" #tabs>
+          <tds-inline-tab >
             <button id="tab0">Live</button>
           </tds-inline-tab>
-          <tds-inline-tab>
+          <tds-inline-tab >
             <button id="tab1">Event</button>
           </tds-inline-tab>
-          <tds-inline-tab>
+          <tds-inline-tab >
             <button id="tab2">Info</button>
           </tds-inline-tab>
         </tds-inline-tabs>

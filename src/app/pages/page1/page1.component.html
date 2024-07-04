@@ -3,7 +3,6 @@
   <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
     <div class="tds-headline-04">Calculate Lap Times</div>
 
-
     <div style="display:inline-block">
       <div class="tds-input">
       <tds-text-field
@@ -15,11 +14,12 @@
         required
         placeholder="Meters"
         no-min-width
+        ngDefaultControl
       ></tds-text-field>
       </div>
       <div class="tds-input">
-        <tds-dropdown [(ngModel)]="drpLapDistance"
-          size="sm" default-value="400" required>
+        <tds-dropdown placeholder="Track"
+          size="sm" (tdsChange)="doChangeDropdown($event)" required ngDefaultControl>
           <tds-dropdown-option value="200">200 m</tds-dropdown-option>
           <tds-dropdown-option value="400">400 m</tds-dropdown-option>
         </tds-dropdown>
@@ -34,19 +34,31 @@
         required
         placeholder="mm:ss"
         no-min-width
+        ngDefaultControl
+        (tdsChange)="modifyAddColon()"
       ></tds-text-field>
       </div>
       <div style="display:inline-block">
-        <tds-button size="xs" text="Filter" (click)="doClick()"></tds-button>
+        <tds-button size="xs" text="Calculate" (click)="doCalc()"></tds-button>
       </div>
     </div>
-
+    <br><br>
     <tds-table vertical-dividers="false" compact-design="true" responsive="false">
       <tds-table-header>
-        <tds-header-cell column-key="lap" column-title="Lap"></tds-header-cell>
-        <tds-header-cell column-key="time" column-title="Time"></tds-header-cell>
+        <tds-header-cell column-key="lap" column-title="Lap">Lap</tds-header-cell>
+        <tds-header-cell column-key="time" column-title="Time">Time</tds-header-cell>
       </tds-table-header>
+      <tds-table-body>
+        <tds-table-body-row *ngFor="let r of lapTimes">
+          <tds-body-cell disablePadding="false">
+            {{r.lap}}
+          </tds-body-cell>
+          <tds-body-cell disablePadding="false">
+            {{r.time}}
+          </tds-body-cell>
 
+        </tds-table-body-row>
+      </tds-table-body>
     </tds-table>
 
 </tds-block>
