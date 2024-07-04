@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="upgrade_tegel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -38,12 +38,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
   <component name="ProjectId" id="2UL2Pf6rluUOQVR375fJMQ1gSgV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,19 +51,15 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;JavaScript Debug.Angular Application.executor&quot;: &quot;Run&quot;,
-    &quot;Karma.app.component.spec.ts.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;javascript.karma.karma_node_package_dir&quot;: &quot;C:/javadev/github/tegel/lennell.github.io/node_modules/@angular/cli&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/sssckr/Desktop/agda/ggd5747-ForecastforecastExcpHandliFromOas/outver2/AGDA_00000001_20240322071257695_00000148.SCCO4119&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.Angular CLI Server.executor&quot;: &quot;Run&quot;,
     &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -120,19 +110,13 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Karma.competition.spec.ts" />
+        <item itemvalue="Karma.competition.spec.ts" />
         <item itemvalue="Karma.app.component.spec.ts" />
         <item itemvalue="Karma.competition.spec.ts" />
         <item itemvalue="Karma.competition.spec.ts" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -246,34 +230,28 @@
       <workItem from="1711125088910" duration="1000000" />
       <workItem from="1711141779634" duration="629000" />
       <workItem from="1711350352525" duration="1584000" />
-      <workItem from="1711374520442" duration="799000" />
-      <workItem from="1711386501854" duration="546000" />
-      <workItem from="1713036211167" duration="122000" />
-      <workItem from="1717436235339" duration="16000" />
-      <workItem from="1717438050663" duration="11000" />
-      <workItem from="1717483271240" duration="23000" />
-      <workItem from="1717497186578" duration="939000" />
-      <workItem from="1717669109778" duration="1493000" />
-      <workItem from="1717741618345" duration="2218000" />
-      <workItem from="1717747855804" duration="152000" />
-      <workItem from="1718007169271" duration="349000" />
-      <workItem from="1718119031952" duration="1162000" />
-      <workItem from="1718120363018" duration="38000" />
-      <workItem from="1718173559651" duration="366000" />
-      <workItem from="1718289433993" duration="3650000" />
-      <workItem from="1718703240002" duration="950000" />
-      <workItem from="1718704246127" duration="1473000" />
-      <workItem from="1718709337734" duration="29000" />
-      <workItem from="1719412260595" duration="1934000" />
-      <workItem from="1719477718698" duration="1024000" />
-      <workItem from="1719479575331" duration="2520000" />
-      <workItem from="1719483798979" duration="1520000" />
-      <workItem from="1719505839564" duration="737000" />
-      <workItem from="1719820165553" duration="767000" />
-      <workItem from="1719841324336" duration="2397000" />
-      <workItem from="1719902043189" duration="342000" />
-      <workItem from="1719908270140" duration="2348000" />
-      <workItem from="1719914704860" duration="4121000" />
+      <workItem from="1711374520442" duration="130000" />
+      <workItem from="1720101842806" duration="64000" />
+      <workItem from="1720101917279" duration="394000" />
+      <workItem from="1720102324742" duration="302000" />
+    </task>
+    <task id="LOCAL−00015" summary="Classes">
+      <created>1693216833814</created>
+      <option name="number" value="LOCAL−00015" />
+      <option name="presentableId" value="LOCAL−00015" />
+      <updated>1693216833814</updated>
+    </task>
+    <task id="LOCAL−00016" summary="Classes">
+      <created>1693224253127</created>
+      <option name="number" value="LOCAL−00016" />
+      <option name="presentableId" value="LOCAL−00016" />
+      <updated>1693224253127</updated>
+    </task>
+    <task id="LOCAL−00017" summary="Classes">
+      <created>1693296063591</created>
+      <option name="number" value="LOCAL−00017" />
+      <option name="presentableId" value="LOCAL−00017" />
+      <updated>1693296063591</updated>
     </task>
     <task id="LOCAL−00018" summary="Classes">
       <created>1693296974955</created>
@@ -551,25 +529,7 @@
       <option name="presentableId" value="LOCAL−00063" />
       <updated>1711142347170</updated>
     </task>
-    <task id="LOCAL−00064" summary="new comp">
-      <created>1711374726397</created>
-      <option name="number" value="LOCAL−00064" />
-      <option name="presentableId" value="LOCAL−00064" />
-      <updated>1711374726397</updated>
-    </task>
-    <task id="LOCAL−00065" summary="new comp">
-      <created>1717743279423</created>
-      <option name="number" value="LOCAL−00065" />
-      <option name="presentableId" value="LOCAL−00065" />
-      <updated>1717743279423</updated>
-    </task>
-    <task id="LOCAL−00071" summary="Build upgrade_tegel">
-      <created>1720081487376</created>
-      <option name="number" value="LOCAL−00071" />
-      <option name="presentableId" value="LOCAL−00071" />
-      <updated>1720081487377</updated>
-    </task>
-    <option name="localTasksCounter" value="72" />
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,9 +555,7 @@
     <MESSAGE value="MyLiveO" />
     <MESSAGE value=".gitignore" />
     <MESSAGE value="new comp" />
-    <MESSAGE value="cli" />
-    <MESSAGE value="Build upgrade_tegel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Build upgrade_tegel" />
+    <option name="LAST_COMMIT_MESSAGE" value="new comp" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

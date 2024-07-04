@@ -8,9 +8,9 @@ import {TdsDatetime} from "@scania/tegel-angular";
   styleUrls: ['./page1.component.css']
 })
 export class Page1Component {
-  txtDistance: number = 1000;
+  txtDistance: number ;
   drpTrackDistance: number;
-  txtTargetTime: string = '10:00';
+  txtTargetTime: string ;
   lapTimes: LapTimes[] = [];
 
   createDate(min:number,sec:number):Date {
