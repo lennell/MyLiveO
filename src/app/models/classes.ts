@@ -11,3 +11,8 @@ export class Class {
   className: string
   _resultsObj: ResultsObj
 }
+
+export class LapTimes {
+  lap: number
+  time: string
+}

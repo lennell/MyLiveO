@@ -17,33 +17,42 @@
   <br/>
 
   <div style="display: inline-block">{{competitionInfo.name}}</div>
+
     <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
-        <tds-inline-tabs default-selected-index="1" #tabs>
-          <tds-inline-tab>
+        <tds-inline-tabs (tdsChange)="onInlineTabChange($event)" default-selected-index="1" #tabs>
+          <tds-inline-tab >
             <button id="tab0">Live</button>
           </tds-inline-tab>
-          <tds-inline-tab>
+          <tds-inline-tab >
             <button id="tab1">Event</button>
           </tds-inline-tab>
-          <tds-inline-tab>
+          <tds-inline-tab >
             <button id="tab2">Info</button>
           </tds-inline-tab>
         </tds-inline-tabs>
         <div class="tabs-panel">
           <span [hidden]="0 !== selectedIndex">
           <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
-              <div style="display:inline-block">
-                <input  [(ngModel)]="txtUser"
-                        type="text"
-                        name="txtUser"
-                        autofocus
-                        required
-                        placeholder="Add filter.."
-                        (ngModelChange)="clearUser()"
-                        [ngModelOptions]="{standalone: true}">
-              </div>
-              <button type="button" (click)="submitFormUser()">Filter</button>
-              <button type="button" (click)="allUser()">All</button>
+             <div style="display:inline-block">
+              <tds-text-field
+                [(ngModel)]="txtUser"
+                type="Text"
+                size="sm"
+                state="default"
+                autofocus
+                required
+                placeholder="Add filter.."
+                (ngModelChange)="clearUser()"
+                label-position="inside"
+                no-min-width
+                ngDefaultControl
+              ></tds-text-field>
+             </div>
+
+             <!-- <button type="button" (click)="submitFormUser()">Filter</button>-->
+            <tds-button size="xs" text="Filter" (click)="submitFormUser()"></tds-button>
+             <tds-button size="xs" text="All" (click)="allUser()"></tds-button>
+
              <tds-link style="margin-left: 10px">
                <a href="#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
              </tds-link>
@@ -95,18 +104,34 @@
           <span [hidden]="1 !== selectedIndex">
         <div style="display:inline-block;padding-right: 5px"><tds-icon name="search"></tds-icon></div>
             <div style="display:inline-block">
-              <input  [(ngModel)]="txtComp"
+
+               <div style="display:inline-block">
+              <tds-text-field
+                [(ngModel)]="txtComp"
+                type="Text"
+                size="sm"
+                state="default"
+                autofocus
+                required
+                placeholder="Filter.."
+                (ngModelChange)="doFilterComp()"
+                label-position="inside"
+                no-min-width
+                ngDefaultControl
+              ></tds-text-field>
+             </div>
+
+            <!--  <input  [(ngModel)]="txtComp"
                       type="text"
                       name="txtSearch"
                       autofocus
                       required
                       (ngModelChange)="doFilterComp()"
                       placeholder="Filter"
-                      [ngModelOptions]="{standalone: true}">
+                      [ngModelOptions]="{standalone: true}">-->
             </div>
-
-            <button type="button" (click)="submitFormComp()">Filter</button>
-            <button type="button" (click)="includeOldComp()">Old</button>
+            <tds-button size="xs" text="Filter" (click)="submitFormComp()"></tds-button>
+             <tds-button size="xs" text="Old" (click)="includeOldComp()"></tds-button>
 
             <div>
             Today:
@@ -129,14 +154,6 @@
 
           </span>
           <span [hidden]="2 !== selectedIndex">
-                         <input  [(ngModel)]="newId"
-                                 type="text"
-                                 name="txtSearch"
-                                 autofocus
-                                 required
-                                 placeholder="New Competition"
-                                 [ngModelOptions]="{standalone: true}">
-            <button type="button" (click)="submitFormNewId()">New Competition</button>
 
             <p>
               {{competitionInfo.id}}

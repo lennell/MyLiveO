@@ -45,6 +45,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @scania/tegel
 MIT
 
+components
+
 ngx-spinner
 MIT
 The MIT License (MIT)

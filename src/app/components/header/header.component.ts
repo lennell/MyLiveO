@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Router} from "@angular/router";
-import {Competition} from "../../models/competition";
 
 @Component({
   selector: 'app-header',
@@ -9,14 +8,18 @@ import {Competition} from "../../models/competition";
 })
 export class HeaderComponent {
 
-
+  mobileNavOpen = false;
   constructor(private router: Router) {}
 
   isActive(url: string): boolean {
-    return this.router.isActive(url, true);
+    return this.router.url === url;
   }
   getCurrentUrl(): string {
     return this.router.url;
   }
 
+  toggleMobileSideMenu() {
+    this.mobileNavOpen = !this.mobileNavOpen;
+
+  }
 }
