@@ -6,9 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/main.29861c6874838a58.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/page1/page1.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,13 +238,8 @@
       <workItem from="1720101842806" duration="64000" />
       <workItem from="1720101917279" duration="394000" />
       <workItem from="1720102324742" duration="773000" />
-      <workItem from="1720159692475" duration="584000" />
-    </task>
-    <task id="LOCAL−00016" summary="Classes">
-      <created>1693224253127</created>
-      <option name="number" value="LOCAL−00016" />
-      <option name="presentableId" value="LOCAL−00016" />
-      <updated>1693224253127</updated>
+      <workItem from="1720159692475" duration="803000" />
+      <workItem from="1720174016671" duration="3830000" />
     </task>
     <task id="LOCAL−00017" summary="Classes">
       <created>1693296063591</created>
@@ -531,7 +529,13 @@
       <option name="presentableId" value="LOCAL−00064" />
       <updated>1720102742594</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL−00065" summary="new comp">
+      <created>1720160403006</created>
+      <option name="number" value="LOCAL−00065" />
+      <option name="presentableId" value="LOCAL−00065" />
+      <updated>1720160403007</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

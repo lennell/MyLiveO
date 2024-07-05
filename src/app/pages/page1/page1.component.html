@@ -19,7 +19,7 @@
       </div>
       <div class="tds-input">
         <tds-dropdown placeholder="Track"
-          size="sm" (tdsChange)="doChangeDropdown($event)" required ngDefaultControl>
+          size="sm" [defaultValue]="drpTrackDistance" (tdsChange)="doChangeDropdown($event)" required ngDefaultControl>
           <tds-dropdown-option value="200">200 m</tds-dropdown-option>
           <tds-dropdown-option value="400">400 m</tds-dropdown-option>
         </tds-dropdown>

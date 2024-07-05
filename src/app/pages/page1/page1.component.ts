@@ -13,6 +13,23 @@ export class Page1Component {
   txtTargetTime: string ;
   lapTimes: LapTimes[] = [];
 
+  ngOnInit(): void {
+    if (localStorage.getItem('meters')){
+      // @ts-ignore
+      this.txtDistance = parseInt(localStorage.getItem('meters'));
+    }
+    if (localStorage.getItem('trackdist')) {
+      // @ts-ignore
+      this.drpTrackDistance = parseInt(localStorage.getItem('trackdist'))
+    }
+    if (localStorage.getItem('target')){
+      // @ts-ignore
+      this.txtTargetTime = localStorage.getItem('target');
+    }
+
+  }
+
+
   createDate(min:number,sec:number):Date {
     let ret = new Date();
     ret.setHours(0);
@@ -22,6 +39,12 @@ export class Page1Component {
   }
 
   doCalc() {
+
+
+    localStorage.setItem('meters',this.txtDistance.toString());
+    localStorage.setItem('trackdist',this.drpTrackDistance.toString());
+    localStorage.setItem('target',this.txtTargetTime.toString());
+
     this.lapTimes.length = 0;
     console.log(this.txtDistance + ' ' + this.drpTrackDistance + ' ' + this.txtTargetTime);
 
