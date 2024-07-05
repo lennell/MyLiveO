@@ -22,14 +22,14 @@
 
 
 
-      <tds-side-menu-item [selected]="isActive('/page1')">
-        <a routerLink="/page1" (click)="toggleMobileSideMenu()">
+      <tds-side-menu-item [selected]="isActive('/')">
+        <a routerLink="/" (click)="toggleMobileSideMenu()">
           Lap calculator
         </a>
       </tds-side-menu-item>
 
-      <tds-side-menu-item [selected]="isActive('/')">
-        <a routerLink="/" (click)="toggleMobileSideMenu()">
+      <tds-side-menu-item [selected]="isActive('/home')">
+        <a routerLink="/home" (click)="toggleMobileSideMenu()">
           Live O Events
         </a>
       </tds-side-menu-item>
