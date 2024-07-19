@@ -13,6 +13,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {NgxSpinnerModule} from "ngx-spinner";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {TegelModule} from "@scania/tegel-angular";
+import { Page2Component } from './pages/page2/page2.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {TegelModule} from "@scania/tegel-angular";
     HeaderComponent,
     HomeComponent,
     Page1Component,
+    Page2Component,
   ],
     imports: [
         HttpClientModule,

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/pages/page2/page2.component.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/page2/page2.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/page2/page2.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/page2/page2.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/models/classes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/classes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,12 +244,15 @@
       <workItem from="1720159692475" duration="803000" />
       <workItem from="1720174016671" duration="4452000" />
       <workItem from="1720182484127" duration="10000" />
-    </task>
-    <task id="LOCAL−00019" summary="Classes">
-      <created>1693301772035</created>
-      <option name="number" value="LOCAL−00019" />
-      <option name="presentableId" value="LOCAL−00019" />
-      <updated>1693301772035</updated>
+      <workItem from="1720186660860" duration="131000" />
+      <workItem from="1720644746296" duration="108000" />
+      <workItem from="1720713380653" duration="3664000" />
+      <workItem from="1720727502520" duration="1908000" />
+      <workItem from="1720860430230" duration="1449000" />
+      <workItem from="1721315738109" duration="5657000" />
+      <workItem from="1721323151561" duration="282000" />
+      <workItem from="1721409408961" duration="946000" />
+      <workItem from="1721422093829" duration="1457000" />
     </task>
     <task id="LOCAL−00020" summary="Classes">
       <created>1693322186241</created>
@@ -530,7 +542,13 @@
       <option name="presentableId" value="LOCAL−00067" />
       <updated>1720181421082</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL−00068" summary="new comp">
+      <created>1720186781901</created>
+      <option name="number" value="LOCAL−00068" />
+      <option name="presentableId" value="LOCAL−00068" />
+      <updated>1720186781901</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
