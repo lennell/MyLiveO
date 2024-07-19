@@ -13,7 +13,7 @@ export class LiveHttpServiceService {
 
   private httpOptions = {
     headers: new HttpHeaders({
-      'Access-Control-Allow-Origin':'https://example.com'
+      'Access-Control-Allow-Origin':'*'
     })
   };
 
