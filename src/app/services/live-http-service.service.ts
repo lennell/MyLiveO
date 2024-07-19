@@ -19,7 +19,9 @@ export class LiveHttpServiceService {
 
   API_URL :string = "https://liveresultat.orientering.se/api.php";
   API_WEBATHL:string = "https://wapublicapi.webathletics.se/sfif/statistics/"; //629197
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+
+  }
 
   getCompetitions():Observable<Object>{
 
