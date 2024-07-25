@@ -1,25 +1,25 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
   Event filter:
   <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px;font-size: smaller">
-    <tds-link ><a (click)="selectFilterComp(s)" href="#">{{s}}</a></tds-link>
+    <tds-link ><a (click)="selectFilterComp(s)" href="home">{{s}}</a></tds-link>
   </span>
   <span style="display:inline-block;margin-left: 10px">
-    <tds-link><a (click)="backComp()" href="#"><<</a></tds-link>
+    <tds-link><a (click)="backComp()" href="home"><<</a></tds-link>
   </span>
   <br/>
   Runner/Club:
   <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px;font-size: smaller">
-    <tds-link ><a (click)="selectFilterUser(u)" href="#">{{u}}</a></tds-link>
+    <tds-link ><a (click)="selectFilterUser(u)" href="home">{{u}}</a></tds-link>
   </span>
   <span style="display:inline-block;margin-left: 10px">
-    <tds-link><a (click)="backUser()" href="#"><<</a></tds-link>
+    <tds-link><a (click)="backUser()" href="home"><<</a></tds-link>
   </span>
   <br/>
 
   <div style="display: inline-block">{{competitionInfo.name}}</div>
 
     <ngx-spinner  bdColor="rgba(51,51,51,0.5)"  type="line-scale-party"> </ngx-spinner>
-        <tds-inline-tabs (tdsChange)="onInlineTabChange($event)" default-selected-index="1" #tabs>
+        <tds-inline-tabs (tdsChange)="onInlineTabChange($event)" default-selected-index="1" hometabs>
           <tds-inline-tab >
             <button id="tab0">Live</button>
           </tds-inline-tab>
@@ -54,7 +54,7 @@
              <tds-button size="xs" text="All" (click)="allUser()"></tds-button>
 
              <tds-link style="margin-left: 10px">
-               <a href="#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
+               <a href="home" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
              </tds-link>
 
               <div *ngFor="let cl of classesObj.classes">
@@ -63,7 +63,7 @@
                 <tds-table-header>
                   <tds-header-cell column-key="className" column-title="Class"></tds-header-cell>
                   <tds-header-cell column-key="name" column-title="Name" customWidth="150px"></tds-header-cell>
-                  <tds-header-cell column-key="split" column-title="#" customWidth="50px"></tds-header-cell>
+                  <tds-header-cell column-key="split" column-title="home" customWidth="50px"></tds-header-cell>
                   <tds-header-cell column-key="result" column-title="Splits"></tds-header-cell>
                   <tds-header-cell column-key="progress" column-title="Progress"></tds-header-cell>
                 </tds-table-header>
@@ -71,7 +71,7 @@
                   <tds-table-body-row *ngFor="let r of cl?._resultsObj?._filteredResults">
                     <tds-body-cell disable-padding="false">
                       <tds-link>
-                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=svhome{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
                         <br>{{toTimeString(r.start)}}
                       </tds-link>
                     </tds-body-cell>
@@ -137,7 +137,7 @@
             Today:
               <span *ngFor="let c of filterToday(competitions)" style="display:inline-block;margin-left: 10px">
                 <tds-link>
-                <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
+                <a href="home" (click)="clickCompetition(c.id)" >{{c.name}}</a>
                 </tds-link>
               </span>
             </div>
@@ -145,7 +145,7 @@
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
-                  {{c.date}}  <a href="#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
+                  {{c.date}}  <a href="home" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
                 </dt>
               </dl>
 
@@ -170,7 +170,7 @@
 
                   <tds-body-cell disable-padding="false">
                     <tds-link>
-                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
+                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=svhome{{cl.className}}" target="_blank" >{{cl.className}}</a>
                     </tds-link>
                   </tds-body-cell>
                 </tds-table-body-row>

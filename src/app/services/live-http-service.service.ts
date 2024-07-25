@@ -13,7 +13,9 @@ export class LiveHttpServiceService {
 
   private httpOptions = {
     headers: new HttpHeaders({
-      'Access-Control-Allow-Origin':'*'
+      'Referer':' https://example.com/',
+      'Access-Control-Allow-Origin':'*',
+
     })
   };
 
@@ -26,7 +28,6 @@ export class LiveHttpServiceService {
   getCompetitions():Observable<Object>{
 
     var r = this.http.get<Object>(this.API_URL+'?method=getcompetitions');
-
     return r;
   }
 
