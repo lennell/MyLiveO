@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/live-http-service.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,6 +243,7 @@
       <workItem from="1721409408961" duration="946000" />
       <workItem from="1721422093829" duration="4213000" />
       <workItem from="1721902043311" duration="306000" />
+      <workItem from="1722235528171" duration="618000" />
     </task>
     <task id="LOCAL−00023" summary="Med splits">
       <created>1693399618411</created>
