@@ -9,7 +9,7 @@
   <br/>
   Runner/Club:
   <span *ngFor="let u of userList" style="display:inline-block;margin-left: 10px;font-size: smaller">
-    <tds-link ><a (click)="selectFilterUser(u)" href="home">{{u}}</a></tds-link>
+    <tds-link ><a (click)="selectFilterUser(u)" href="/home">{{u}}</a></tds-link>
   </span>
   <span style="display:inline-block;margin-left: 10px">
     <tds-link><a (click)="backUser()" href="home"><<</a></tds-link>
@@ -71,7 +71,7 @@
                   <tds-table-body-row *ngFor="let r of cl?._resultsObj?._filteredResults">
                     <tds-body-cell disable-padding="false">
                       <tds-link>
-                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=svhome{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
+                        <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{doTrunc(cl.className)}}</a>
                         <br>{{toTimeString(r.start)}}
                       </tds-link>
                     </tds-body-cell>
@@ -170,7 +170,7 @@
 
                   <tds-body-cell disable-padding="false">
                     <tds-link>
-                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=svhome{{cl.className}}" target="_blank" >{{cl.className}}</a>
+                      <a href="https://liveresultat.orientering.se/followfull.php?comp={{competitionInfo.id}}&lang=sv#{{cl.className}}" target="_blank" >{{cl.className}}</a>
                     </tds-link>
                   </tds-body-cell>
                 </tds-table-body-row>
