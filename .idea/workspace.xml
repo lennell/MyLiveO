@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,13 +247,7 @@
       <workItem from="1721902043311" duration="306000" />
       <workItem from="1722235528171" duration="618000" />
       <workItem from="1722583811288" duration="309000" />
-      <workItem from="1722835037458" duration="1684000" />
-    </task>
-    <task id="LOCAL−00024" summary="Med splits">
-      <created>1693483756486</created>
-      <option name="number" value="LOCAL−00024" />
-      <option name="presentableId" value="LOCAL−00024" />
-      <updated>1693483756486</updated>
+      <workItem from="1722835037458" duration="2072000" />
     </task>
     <task id="LOCAL−00025" summary="Med splits">
       <created>1693552608874</created>
@@ -544,7 +537,13 @@
       <option name="presentableId" value="LOCAL−00072" />
       <updated>1722584097198</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL−00073" summary="new lang">
+      <created>1722836832302</created>
+      <option name="number" value="LOCAL−00073" />
+      <option name="presentableId" value="LOCAL−00073" />
+      <updated>1722836832302</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +580,8 @@
     <MESSAGE value="MyLiveO" />
     <MESSAGE value=".gitignore" />
     <MESSAGE value="new comp" />
-    <option name="LAST_COMMIT_MESSAGE" value="new comp" />
+    <MESSAGE value="new lang" />
+    <option name="LAST_COMMIT_MESSAGE" value="new lang" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
