@@ -1,10 +1,10 @@
 <tds-block class="tds-container" xmlns="http://www.w3.org/1999/html">
   Event filter:
   <span *ngFor="let s of compList" style="display:inline-block;margin-left: 10px;font-size: smaller">
-    <tds-link ><a (click)="selectFilterComp(s)" href="home">{{s}}</a></tds-link>
+    <tds-link ><a (click)="selectFilterComp(s)" href="home#">{{s}}</a></tds-link>
   </span>
   <span style="display:inline-block;margin-left: 10px">
-    <tds-link><a (click)="backComp()" href="home"><<</a></tds-link>
+    <tds-link><a (click)="backComp()" href="home#"><<</a></tds-link>
   </span>
   <br/>
   Runner/Club:
@@ -12,7 +12,7 @@
     <tds-link ><a (click)="selectFilterUser(u)" href="home#">{{u}}</a></tds-link>
   </span>
   <span style="display:inline-block;margin-left: 10px">
-    <tds-link><a (click)="backUser()" href="home"><<</a></tds-link>
+    <tds-link><a (click)="backUser()" href="home#"><<</a></tds-link>
   </span>
   <br/>
 
@@ -54,7 +54,7 @@
              <tds-button size="xs" text="All" (click)="allUser()"></tds-button>
 
              <tds-link style="margin-left: 10px">
-               <a href="home" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
+               <a href="home#" (click)="doReload()"><tds-icon name="refresh" size="16px"></tds-icon></a>
              </tds-link>
 
               <div *ngFor="let cl of classesObj.classes">
@@ -137,7 +137,7 @@
             Today:
               <span *ngFor="let c of filterToday(competitions)" style="display:inline-block;margin-left: 10px">
                 <tds-link>
-                <a href="home" (click)="clickCompetition(c.id)" >{{c.name}}</a>
+                <a href="home#" (click)="clickCompetition(c.id)" >{{c.name}}</a>
                 </tds-link>
               </span>
             </div>
@@ -145,7 +145,7 @@
             <div >
               <dl>
                 <dt *ngFor="let c of competitions" [style.font-weight]="c.date===todayDate?'bold':''" ><tds-link>
-                  {{c.date}}  <a href="home" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
+                  {{c.date}}  <a href="home#" (click)="clickCompetition(c.id)" >{{c.name}}</a></tds-link>
                 </dt>
               </dl>
 
