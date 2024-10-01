@@ -7,12 +7,7 @@
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +17,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="upgrade_tegel" />
+        <entry key="$PROJECT_DIR$" value="bak_master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,10 +111,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Karma.competition.spec.ts" />
-        <item itemvalue="Karma.competition.spec.ts" />
         <item itemvalue="Karma.app.component.spec.ts" />
         <item itemvalue="Karma.competition.spec.ts" />
         <item itemvalue="Karma.competition.spec.ts" />
+        <item itemvalue="Karma.app.component.spec.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -256,13 +251,7 @@
       <workItem from="1722583811288" duration="309000" />
       <workItem from="1722835037458" duration="3947000" />
       <workItem from="1726472745520" duration="525000" />
-      <workItem from="1727773502962" duration="780000" />
-    </task>
-    <task id="LOCAL−00027" summary="Med splits">
-      <created>1693593229864</created>
-      <option name="number" value="LOCAL−00027" />
-      <option name="presentableId" value="LOCAL−00027" />
-      <updated>1693593229864</updated>
+      <workItem from="1727773502962" duration="2087000" />
     </task>
     <task id="LOCAL−00028" summary="Med splits">
       <created>1693806357395</created>
@@ -552,7 +541,13 @@
       <option name="presentableId" value="LOCAL−00075" />
       <updated>1722838467377</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL−00076" summary="new lang">
+      <created>1727774943567</created>
+      <option name="number" value="LOCAL−00076" />
+      <option name="presentableId" value="LOCAL−00076" />
+      <updated>1727774943567</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
