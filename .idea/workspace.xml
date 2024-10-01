@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
     </list>
@@ -252,12 +251,6 @@
       <workItem from="1722835037458" duration="3947000" />
       <workItem from="1726472745520" duration="525000" />
       <workItem from="1727773502962" duration="2087000" />
-    </task>
-    <task id="LOCAL−00028" summary="Med splits">
-      <created>1693806357395</created>
-      <option name="number" value="LOCAL−00028" />
-      <option name="presentableId" value="LOCAL−00028" />
-      <updated>1693806357395</updated>
     </task>
     <task id="LOCAL−00029" summary="Med splits">
       <created>1693819988709</created>
@@ -547,7 +540,13 @@
       <option name="presentableId" value="LOCAL−00076" />
       <updated>1727774943567</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL−00077" summary="new lang">
+      <created>1727777134786</created>
+      <option name="number" value="LOCAL−00077" />
+      <option name="presentableId" value="LOCAL−00077" />
+      <updated>1727777134787</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
