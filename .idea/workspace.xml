@@ -5,11 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfa93afc-d1e3-4520-969c-cce2d896c9d3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/main.05f16394a660ce70.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/main.f8f4510a05d5624f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/home/home.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/page2/page2.component.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,13 +254,9 @@
       <workItem from="1721902043311" duration="306000" />
       <workItem from="1722235528171" duration="618000" />
       <workItem from="1722583811288" duration="309000" />
-      <workItem from="1722835037458" duration="2920000" />
-    </task>
-    <task id="LOCAL−00026" summary="Med splits">
-      <created>1693553605954</created>
-      <option name="number" value="LOCAL−00026" />
-      <option name="presentableId" value="LOCAL−00026" />
-      <updated>1693553605954</updated>
+      <workItem from="1722835037458" duration="3947000" />
+      <workItem from="1726472745520" duration="525000" />
+      <workItem from="1727773502962" duration="780000" />
     </task>
     <task id="LOCAL−00027" summary="Med splits">
       <created>1693593229864</created>
@@ -547,7 +546,13 @@
       <option name="presentableId" value="LOCAL−00074" />
       <updated>1722837158931</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL−00075" summary="new lang">
+      <created>1722838467377</created>
+      <option name="number" value="LOCAL−00075" />
+      <option name="presentableId" value="LOCAL−00075" />
+      <updated>1722838467377</updated>
+    </task>
+    <option name="localTasksCounter" value="76" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
